@@ -1,0 +1,16 @@
+    <ul class="readinglist">
+    {% for element in include.lecture.contents %}
+    <li>
+      {% if element.link %}
+        <a title="Download {{ element.name }}" href="
+        {% if element.link contains '://' %}
+          {{ element.link }} 
+        {% else %}
+          {{ element.link | prepend: site.baseurl }} 
+        {% endif %}">{{ element.name }}</a>
+      {% else %}
+        {{ element }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>

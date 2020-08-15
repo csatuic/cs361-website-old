@@ -1,0 +1,27 @@
+<div class="col col-1" data-label="Event">Weekly topics</div>
+<div class="col col-1-2" data-label="Date">
+    Week of 
+    {{ event.date | date: "%A" }}
+    <br class="date-spliter" />
+    {{ event.date | date: site.dateformat }}
+</div>
+<div class="col col-2" data-label="Description">
+    {{ include.event.title }}
+</div>
+<div class="col col-3 markdown-content" data-label="Course Material">
+    
+    {% include lecture_links.html lecture=include.event %}
+    <!-- {% if include.event.suggested_readings %}
+    <p style="margin-bottom: 2px">Suggested Readings:</p>
+    <ul>
+        {% for m in include.event.suggested_readings %}
+        <li class="raw_li">{% if m.url %}<a href="{{ m.url }}">{{ m.title }}</a>{% else %}{{ m.title }}{%
+            endif %}</li>
+
+        {% endfor %}
+    </ul>
+    {% endif %} -->
+    </div>
+    <div class="col col-4 markdown-content" data-label="Notes">
+        {{ event.notes }}
+</div>

@@ -1,0 +1,30 @@
+# jekyll
+_site/
+.sass-cache/
+.jekyll-metadata
+.jekyll-cache
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# C
+*.out
+*.i
+*.o
+*.S
+
+# Python
+*.pyc
+
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+.DS_Store

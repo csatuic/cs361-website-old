@@ -1,0 +1,19 @@
+---
+title: lab 1
+description: course intro
+layout: default
+due: Monday, August 24th 5pm Chicago time
+date: 2020-08-24
+# notes gets passed through markdownify
+
+ 
+---
+
+# Lab 1: Welcome/intro
+
+This lab is an easy one. Please complete these activities:
+
+1. Read the syllabus, and if you have any questions, ask on [Piazza]({{ site.discussion}}).
+1. Take [the pre-class survey](https://forms.gle/SvDr1wyDyUvFLdcL9)
+2. Respond to [this flipgrid](https://flipgrid.com/b9eee2da)
+3. Complete [this gradescope assignment](https://www.gradescope.com/courses/149010/assignments/582947)

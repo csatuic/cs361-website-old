@@ -1,0 +1,62 @@
+name: "CS 361: Systems Programming"
+description: "Course web page for CS 361 at UIC."
+author: "Chris Kanich"
+departmenturl: "https://www.cs.uic.edu/"
+departmentname: "UIC Computer Science"
+personal: "https://www.cs.uic.edu/~ckanich/"
+
+gradescope: "https://www.gradescope.com/courses/149010"
+discussion: "https://piazza.com/uic/fall2020/cs361"
+
+dateformat: "%m/%d/%Y"
+future: true
+
+# render homework html files into the root directory
+collections:
+  homeworks:
+    output: true
+    permalink: /:path:output_ext
+  labs:
+    output: true
+    permalink: /:path:output_ext
+  lectures:
+    permalink: /:path:output_ext
+
+
+# give every page the 'default' layout
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+# add types to different collections so that they get added to the
+# schedule properly.
+  - scope:
+      path: ""
+      type: homeworks
+    values:
+      type: homework
+  - scope:
+      path: ""
+      type: lectures
+    values:
+      type: lecture
+  - scope:
+      path: ""
+      type: labs
+    values:
+      type: lab
+  - scope:
+      path: ""
+      type: events
+    values:
+      type: event
+
+baseurl: "/~ckanich/cs361/f20"
+
+exclude: [README.md, Makefile]
+
+# section ordering
+sections: [home, syllabus, schedule, labs, homeworks]
+
+

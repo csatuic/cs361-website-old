@@ -1,0 +1,188 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$header-background-invert: 0%;
+@import "user_vars";
+
+// Our variables
+$base-font-family: "Droid Sans", Arial, sans-serif;
+$base-font-size:   .95em;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      $primary-color;
+
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+// Width of the content area
+$content-width:    950px;
+
+$on-palm:          600px;
+$on-laptop:        950px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+ul.readinglist{
+    padding-inline-start: 0px;
+    li{
+        display: list-item;
+        padding: 1px 1px;
+    }
+}
+
+.responsive-table {
+
+    li {
+        padding: 7px 8px;
+        display: flex;
+        justify-content: space-between;
+        // margin-bottom: 15px;
+    }
+
+    .raw_li {
+        display: list-item !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .table-header {
+        color: $brand-color;
+        font-weight: bold;
+        letter-spacing: 0.03em;
+    }
+
+    .table-row {
+        background-color: #ffffff;
+        border-color: whitesmoke;
+        border-width: 0.1em;
+        border-style: solid;
+        border-bottom: none;
+    }
+
+    .table-row-homework {
+        background-color: lighten($accent-color,45);
+    }
+
+    .table-row-due {
+        background-color: lighten($primary-color,50);
+    }
+
+    .table-row-exam {
+        background-color: lighten($title-color,40);
+    }
+
+    .table-row-lab {
+        background-color: lighten($secondary-color,30);
+    }
+
+    .table-row-lecture {
+        background-color: lighten($title-color,75);
+    }
+
+    .col-1,.col-1-2,.col-2,.col-3,.col-4 {
+        padding: 4px;
+    }
+
+    .col-1 {
+        flex-basis: 15%;
+    }
+
+    .col-1-2 {
+        text-align: center;
+        flex-basis: 20%;
+    }
+
+    .col-2 {
+        flex-basis: 20%;
+    }
+
+    .col-3 {
+        flex-basis: 25%;
+    }
+
+    .col-4 {
+        flex-basis: 35%;
+
+        ul {
+            margin-bottom: 0;
+        }
+    }
+
+    .date-spliter {}
+
+    @media all and (max-width: 767px) {
+        .table-header {
+            display: none;
+        }
+
+        .table-row {}
+
+        li {
+            display: block;
+        }
+
+        .col {
+
+            flex-basis: 100%;
+
+        }
+
+        .col {
+            display: block;
+            padding: 10px 0;
+
+            &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+
+        .col-1 {
+            display: block;
+            padding: 10px 0;
+
+            &:before {
+                content: none;
+            }
+        }
+
+        .col-4 {
+            padding: 0;
+
+        }
+
+        .col-1-2 {
+            text-align: left;
+        }
+
+        .date-spliter {
+            display: none;
+        }
+    }
+}

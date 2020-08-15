@@ -1,0 +1,28 @@
+<div class="col-md-3">
+  <div class="bs-sidebar hidden-print" >
+    <ul class="nav bs-sidenav">
+      {% for sect in site.sections %}
+
+      {% assign pg = site.pages | where:"keyword",sect %} 
+      {% assign pg = pg[0] %}
+        <li {% if page.url == pg.url %}class="active"{% endif %}><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.keyword }}</a> </li>
+        {% if pg.keyword == 'homeworks' %}
+        <ul class="nav">
+          {% for pg in site.homeworks %}
+            <li {% if pg.url == page.url %}class="active"{% endif %}  ><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.title }}</a> </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if pg.keyword == 'labs' %}
+        <ul class="nav">
+          {% for pg in site.labs %}
+            <li {% if pg.url == page.url %}class="active"{% endif %}  ><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.title }}</a> </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+        <li><a href="{{ site.discussion }}">discussion</a></li>
+        <li><a href="{{ site.gradescope }}">gradescope</a></li>
+    </ul>
+  </div>
+</div>
