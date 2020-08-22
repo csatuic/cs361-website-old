@@ -1,12 +1,16 @@
-<div class="col col-1" style="color: #a94442 ;font-weight: bold;" data-label="Event">Exam</div>
-<div class="col col-1-2" style="font-weight: bold" data-label="Date">
+<div class="col col-1" style="color: #244d4a ;font-weight: bold;" data-label="Event">Exam</div>
+<div class="col col-1-2"data-label="Date">
+    {{ event.date | date: "%A" }}
+    <br class="date-spliter" />
     {{ event.date | date: site.dateformat }}
-    {{ event.date | date: "%H:%M" }}
-    <br class="date-spliter"/>{{ event.date | date: "%A" }}
+    {{ event.date | date: "%I:%M %p" }}
+    
 </div>
-<div class="col col-2" style="font-weight: bold" data-label="Description">
-    {{ include.event.description }}
+<div class="col col-2" data-label="Description">
+    {{ include.event.title }} 
 </div>
-<div class="col col-4 markdown-content" data-label="Course Material">
-    {{ include.event.content}}
+<div class="col col-3" data-label="Content">
+    
+</div>
+<div class="col col-4" data-label="Notes"> {{ event.notes }}
 </div>

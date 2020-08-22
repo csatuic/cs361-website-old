@@ -91,7 +91,7 @@ ul.readinglist{
     }
 
     .table-row-exam {
-        background-color: lighten($title-color,40);
+        background-color: lighten($primary-color,40);
     }
 
     .table-row-lab {
@@ -124,7 +124,7 @@ ul.readinglist{
     }
 
     .col-4 {
-        flex-basis: 35%;
+        flex-basis: 20%;
 
         ul {
             margin-bottom: 0;

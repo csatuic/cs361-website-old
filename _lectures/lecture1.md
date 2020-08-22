@@ -9,6 +9,8 @@ contents:
       name: course overview
     - link: https://www.youtube.com/watch?v=N6acwsgUl1w
       name: environment
+    - link: https://www.youtube.com/watch?v=jWZMEenRB8s
+      name: remote containers development
     - shell video
     - ssh video
     - git video

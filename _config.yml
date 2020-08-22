@@ -21,6 +21,8 @@ collections:
     permalink: /:path:output_ext
   lectures:
     permalink: /:path:output_ext
+  events:
+    permalink: /:path:output_ext
 
 
 # give every page the 'default' layout
