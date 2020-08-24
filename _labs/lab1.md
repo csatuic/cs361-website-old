@@ -11,7 +11,8 @@ date: 2020-08-24
 
 # Lab 1: Welcome/intro
 
-This lab is an easy one. Please complete these activities:
+This lab is an easy one. Please complete these activities WHILE YOU ARE
+IN YOUR LAB SESSION (that part is important):
 
 1. Read the syllabus, and if you have any questions, ask on [Piazza]({{ site.discussion}}).
 1. Take [the pre-class survey](https://forms.gle/SvDr1wyDyUvFLdcL9)
