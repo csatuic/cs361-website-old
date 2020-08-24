@@ -23,5 +23,5 @@
     {% endif %} -->
     </div>
     <div class="col col-4 markdown-content" data-label="Notes">
-        {{ event.notes }}
+        {{ event.notes | markdownify }}
 </div>

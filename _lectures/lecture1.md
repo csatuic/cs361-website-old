@@ -14,7 +14,7 @@ contents:
     - shell video
     - ssh video
     - git video
-
+notes: "[MIT's missing semester](https://missing.csail.mit.edu/) module goes into these topics in a lot more detail."
 ---
 
 If there is any **extended** web based info for the lecture, it can go here.
