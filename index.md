@@ -23,7 +23,7 @@ keyword: home
 **Undergraduate TA**: TBD     
 **Office**: [MS Teams][teams]      
 
-[teams]: https://teams.microsoft.com/l/team/19%3aae32319f0e604fcb94a36448a3ec7473%40thread.tacv2/conversations?groupId=84cbac8f-aac5-4a51-9d3c-91950937e7ea&tenantId=e202cd47-7a56-4baa-99e3-e3b71a7c77dd
+[teams]: https://teams.microsoft.com/l/team/19%3a4fc12e999b3041439aa197a44f666a0d%40thread.tacv2/conversations?groupId=86a163d3-11e4-4ae6-893c-78bc11d425af&tenantId=e202cd47-7a56-4baa-99e3-e3b71a7c77dd
 [pi]: http://mazur.harvard.edu/research/detailspage.php?rowid=8
 [ckanich]: mailto:ckanich@uic.edu
 [piazza]: {{site.discussion}}
