@@ -14,9 +14,9 @@ This semester, the intended flow of a week of class is this:
 *  Mondays: there is a synchronous, online, required lab session with a short activity and a
    Gradescope quiz based on that activity **due on that day at 5pm**. Check your schedule for the
    time of your lab session; the lab will take place via Blackboard Collaborate.
-*  Tuesdays: open Q&A office hours. Video lectures for the week
+*  Tuesdays: open Q&A office hours in [MS Teams]({{site.msteams}}). Video lectures for the week
    premiere. I will keep them in [this YouTube playlist]({{site.playlist}}).
-*  Thursdays: Content quizzes and discussion question resposnes **are due at noon**. I will go over
+*  Thursdays: Content quizzes and discussion question responses **are due at noon**. I will go over
    discussion question answers in class. Discussion questions are **loosely** based on exam question
    style, structure, and content.
 
