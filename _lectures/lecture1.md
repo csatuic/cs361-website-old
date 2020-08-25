@@ -11,9 +11,12 @@ contents:
       name: environment
     - link: https://www.youtube.com/watch?v=jWZMEenRB8s
       name: remote containers development
-    - shell video
-    - ssh video
-    - git video
+    - name: shell
+      link: https://www.youtube.com/watch?v=cK24JPyouxc
+    - name: ssh
+      link: https://www.youtube.com/watch?v=SWe9ldIxs5o
+    - name: git, GitHub, Gradescope
+      link: https://www.youtube.com/watch?v=WXudtLoLIao
 notes: "[MIT's missing semester](https://missing.csail.mit.edu/) module goes into these topics in a lot more detail."
 ---
 
