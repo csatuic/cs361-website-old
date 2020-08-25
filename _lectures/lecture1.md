@@ -9,15 +9,18 @@ contents:
       name: course overview
     - link: https://www.youtube.com/watch?v=N6acwsgUl1w
       name: environment
-    - link: https://www.youtube.com/watch?v=jWZMEenRB8s
-      name: remote containers development
     - name: shell
       link: https://www.youtube.com/watch?v=cK24JPyouxc
     - name: ssh
       link: https://www.youtube.com/watch?v=SWe9ldIxs5o
     - name: git, GitHub, Gradescope
       link: https://www.youtube.com/watch?v=WXudtLoLIao
-notes: "[MIT's missing semester](https://missing.csail.mit.edu/) module goes into these topics in a lot more detail."
+    - link: https://www.youtube.com/watch?v=jWZMEenRB8s
+      name: remote development
+notes: |
+    [MIT's missing semester](https://missing.csail.mit.edu/) module
+    goes into these topics in a lot more detail.<br>For git specifically,
+    [Dangit, git](https://dangitgit.com/en) can be quite helpful.
 ---
 
 If there is any **extended** web based info for the lecture, it can go here.
