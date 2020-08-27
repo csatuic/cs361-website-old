@@ -10,54 +10,41 @@ due:
   date: 2020-09-02T23:59:00-5:00
   description: linux executable format
 date: 2020-08-24
-
+github_link: TODO
+skeleton_repo: TODO
 ---
 
-### Homework 1: The ELF format
+# Homework 1: The ELF format
 
+This homework is meant to get you familiarized with the ELF
+file format and the process of linking executables.
 
-#### git, personal and public repositories
-
-The primary objective of this homework is to get you familiarized with the ELF
-file format and the process of linking executables. The secondary goal of this
-assignment is to give you some experience using the Gradescope autograder and
-turnin system.
-
-We covered using git in the first lab, but if you're still not that familiar
+We covered using git in the lab, but if you're still not that familiar
 with it, this assignment is a second chance to get up to speed. Remember: git
 gives you warnings and errors _for good reason_, if it complains at the command
 line when you run a command, don't just assume it's completed correctly!
 
-Setting git to the simple push is a helpful quality of life improvement, this is
-recommended but not required:
-
-{% highlight bash %}
-git config --global push.default simple
-{% endhighlight %}
-
-You should also tell git who you are, otherwise it will complain that you are
-some anonymous coder. Do this, but use your own name and email. Note that if you
-do not change your username and email properly, you won't get credit.
-
-{% highlight bash %}
-$ git config --global user.name "Copypasting Carol"
-$ git config --global user.email copypasta@domain.invalid
-{% endhighlight %}
-
 The skeleton code for this assignment is available at [this
-link](https://classroom.github.com/a/cRsX197M). You must use GitHub classroom to
+link]({{github_link}}). You must use GitHub classroom to
 write your code and keep a commit log on GitHub. You can submit the code via
-[Gradescope](https://www.gradescope.com/).
+[Gradescope]({{site.gradescope}}).
 
 Now that you have the skeleton code, you can start coding. You should commit
 early and often, and push to your remote repository whenever is convenient to
 back up your work!
 
-#### Programming environment
+## Programming environment
 
-This assignment was created in a Debian-derived Linux environment. This assignment is simple enough that any Linux environment with an up to date `gcc` will be sufficient, including `systems1.cs.uic.edu`. If you aren't seeing the line with **__GLOBAL__OFFSET__TABLE__** in it, don't worry. The autograder is written to the correct specification for the autograding environment. Feel free to complete this on a lab machine, a local Linux VM, or elsewhere.
+This assignment was created in an Ubuntu 18.04 based environment. The
+skeleton code comes with a `devcontainer` setup script so that running
+it in a remote container through Visual Studio Code will put you in the
+same environment. This assignment is simple enough that any Linux
+environment with an up to date `gcc` should be sufficient, including
+`systems1.cs.uic.edu`. If you aren't/can't/don't want to complete this
+assignment using vscode remote containers, feel free to complete this on
+a lab machine, a local Linux VM, or elsewhere.
 
-#### The Programming Part!
+## The Programming Part!
 
 This part will give you a quick introduction to using `readelf` to better
 understand the linking process.
@@ -116,20 +103,24 @@ Hints:
   assembly code chosen by the compiler to execute the body of each function).
 
 
-#### Template 
+## Template 
 
 There is a very bare bones skeleton and a Makefile provided for this assignment. The skeleton file is worth one point because it compiles with no warnings and no errors.
 
-#### Grading
-Grading will be done automatically using Gradescope. Submitting to GitHub is not sufficient - your code must be submitted to Gradescope. If you have issues with the autograder, please contact us via Piazza ASAP. **Technical issues within 36 hours of the deadline will not be an excuse for submitting the assignment improperly or late.**
+## Grading
+Grading will be done automatically using Gradescope. Submitting to
+GitHub is not sufficient - your code must be submitted to Gradescope. If
+you have issues with the autograder, please contact us via Piazza ASAP.
+**Technical issues with submitting your assignment is not an acceptable
+excuse for submitting the assignment improperly or late.**
 
-#### Due Date
-This assignment is due {{ page.due_event.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turnin policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
+## Due Date
+This assignment is due {{ page.due.date | date_to_rfc822 }}. See the
+[syllabus](syllabus.html) for the late turnin policy. This assignment is
+worth just as much as every other homework, but is easier than all the
+rest (in our opinion) so getting as much credit on it as possible is
+important!
 
-#### helpful documents
+## helpful documents
 
-* The git zine mentioned in class
-* [Dangit, git!](https://dangitgit.com/)
-* [Think Like (a) Git](http://think-like-a-git.net/)  
-* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
-* [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/)
+Chapter 7 in the book

@@ -7,7 +7,8 @@ date: 2020-08-31
 github_link: https://classroom.github.com/a/mCw7Yp3I
 # notes get passed through markdownify
 eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA6tHsB0Jwq-i-LKhWJ1N9g/viewform
- 
+skeleton_repo: csatuic/cs361-lab2-skeleton
+
 ---
 
 # Lab 2: Turning in assignments
@@ -30,7 +31,21 @@ There are two main deliverables:
    * Can Navigate to the course Gradescope page and upload those
      changes.
 
+You should also tell git who you are, otherwise it will complain that you are
+some anonymous coder. Do this, but use your own name and email. Note that if you
+do not change your username and email properly, you won't get credit.
+
+{% highlight bash %}
+$ git config --global user.name "Copypasting Carol"
+$ git config --global user.email copypasta@domain.invalid
+{% endhighlight %}
+
 **TODO**: Give more details on what this lab entails. The main thing we
 should provide details on is the rubric of "what do you need to show the
 other person you are capable of doing to get full credit," maybe with a
 video.
+
+* [Dangit, git!](https://dangitgit.com/)
+* [Think Like (a) Git](http://think-like-a-git.net/)  
+* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
+* [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/)
