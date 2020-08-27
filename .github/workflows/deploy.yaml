@@ -1,6 +1,9 @@
 name: Publish course website
 
-on: push
+on: 
+  push:
+    branches:
+      - main
 jobs:
   jekyll:
     runs-on: ubuntu-latest
