@@ -20,8 +20,10 @@ keyword: home
 **Graduate TAs**: Alex Politoiwcz, Shubham Singh, Mohammad Ghasemisharif   
 **Office**: [MS Teams][teams]   
 
-**Undergraduate TA**: Akhil Modi, Samuel Okechukwu, Wisam Abunimeh, James Rainbolt   
+**Undergraduate TAs**: Akhil Modi, Samuel Okechukwu, Wisam Abunimeh, James Rainbolt   
 **Office**: [MS Teams][teams]      
+
+<iframe src="https://calendar.google.com/calendar/embed?src=c_pieebda51v6jvmaq7s0drsvg5g%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
 
 [teams]: {{site.msteams}}
 [pi]: http://mazur.harvard.edu/research/detailspage.php?rowid=8
