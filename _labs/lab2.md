@@ -17,8 +17,20 @@ a test run for doing the paired lab activities for this class.
 There are two main deliverables:
 1. Complete the Gradescope based programming assignment for the lab. All
    course assignments are visible from the [course Gradescope page]({{
-   site.gradescope }}).
+   site.gradescope }}). The skeleton code is
+   available in [this GitHub Classroom assignment]({{github_link}}).
+   Performing this 
 2. Screen share with your evaluator and show them that you are able to
-   execute the homework submission workflow.
+   execute the homework submission workflow. You receive one point for
+   each of:
+   * Can clone a clean copy of their assignment GitHub repository using
+     ssh without typing a password.
+   * Can make a change, commit it, and push it (again no password
+     typing).
+   * Can Navigate to the course Gradescope page and upload those
+     changes.
 
-TODO: Give more details on what this lab entails.
+**TODO**: Give more details on what this lab entails. The main thing we
+should provide details on is the rubric of "what do you need to show the
+other person you are capable of doing to get full credit," maybe with a
+video.
