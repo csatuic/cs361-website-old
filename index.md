@@ -10,8 +10,8 @@ keyword: home
 
 # Basics
 **Lab Section** Mondays (see your schedule for specific time)    
-**Office Hours**: 12:30 pm-3:30 pm Tuesdays [via MS Teams]([teams])    
-**Q&A Session**: 12:30 pm - 3:30 pm Thursdays   
+**Office Hours**: 12:30 pm-3:30 pm Tuesdays [via MS Teams][teams]    
+**Q&A Session**: 12:30 pm - 3:30 pm Thursdays [via MS Teams][teams]   
 **Instructor**: [Chris Kanich][ckanich]   
 **Book**: Computer Systems, a programmer's perspective, by Randal E. Bryant and David R. O'Hallaron. Reading assignments will follow the 3rd edition.    
 
