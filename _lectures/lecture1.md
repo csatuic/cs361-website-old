@@ -30,7 +30,7 @@ The overall theme of this week's lesson is getting more efficient at CS-ing, but
 
 ## Fresh install to fully set up environment
 
-THe goal here is to set up your PC with easy access to a local Linux development environment. This can be accomplished in lots of different ways, but we're going to leverage [VSCode's remote developement](https://code.visualstudio.com/docs/remote/remote-overview) feature as it allows us to create a relatively standardized enviornment across the big three desktop-class computer operating systems (Windows, MacOS, & Linux).
+The goal here is to set up your PC with easy access to a local Linux development environment. This can be accomplished in lots of different ways, but we're going to leverage [VSCode's remote development](https://code.visualstudio.com/docs/remote/remote-overview) feature as it allows us to create a relatively standardized environment across the big three desktop-class computer operating systems (Windows, MacOS, & Linux).
 
 ## Home directories
 
@@ -67,7 +67,7 @@ On a modern Debian derived machine, `sudo apt update && sudo apt upgrade` will b
 
 ## Programs you'll need installed
 
-* `git`. Mac has it preinstalled, on Linux you may need `apt install git`, on Windows you can install it via `choco install git` or [download the installer](https://git-scm.com/download/win). On Windows you will also need to tell git to use the system ssh client we're about to install - [follow this SA answer](https://stackoverflow.com/a/54657119) to do so.
+* `git`. Mac has it preinstalled, on Linux you may need `apt install git`, on Windows you can install it via `choco install git` or [download the installer](https://git-scm.com/download/win). On Windows you will also need to tell git to use the system ssh client we're about to install - [follow this StackOverflow answer](https://stackoverflow.com/a/54657119) or follow the instructions below under "Using your ssh agent from git."
 * `ssh`. Preinstalled on Mac and Linux. On Windows, click Start, Settings, Apps, Apps and Features, Manage Optional Features. If OpenSSH client is not already installed, click "Add a feature", type OpenSSH Client, and click install.
 * `ssh-agent`. Pre-installed and pre-activated on Mac and most Linux desktops. On Windows, in an Administrator PowerShell session, you can run these three commands:
   * `Set-Service ssh-agent -StartupType Automatic`
