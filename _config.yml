@@ -23,6 +23,7 @@ collections:
     output: true
     permalink: /:path:output_ext
   lectures:
+    output: true
     permalink: /:path:output_ext
   events:
     permalink: /:path:output_ext
@@ -62,6 +63,6 @@ baseurl: "/~ckanich/cs361/f20"
 exclude: [README.md, Makefile]
 
 # section ordering
-sections: [home, syllabus, schedule, labs, homeworks]
+sections: [home, syllabus, schedule, labs, homeworks, lectures]
 
 

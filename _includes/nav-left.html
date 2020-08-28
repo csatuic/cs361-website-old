@@ -6,17 +6,13 @@
       {% assign pg = site.pages | where:"keyword",sect %} 
       {% assign pg = pg[0] %}
         <li {% if page.url == pg.url %}class="active"{% endif %}><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.keyword }}</a> </li>
-        {% if pg.keyword == 'homeworks' %}
+        {% if pg.keyword == 'homeworks' or pg.keyword == 'labs' or pg.keyword == 'lectures' %}
         <ul class="nav">
-          {% for pg in site.homeworks %}
+          {% for pg in site[pg.keyword] %}
+          {{ pg.special }}
+          {% if pg.collection != 'lectures' or pg.render == true %}
             <li {% if pg.url == page.url %}class="active"{% endif %}  ><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.title }}</a> </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% if pg.keyword == 'labs' %}
-        <ul class="nav">
-          {% for pg in site.labs %}
-            <li {% if pg.url == page.url %}class="active"{% endif %}  ><a href="{{site.baseurl}}{{ pg.url }}">{{ pg.title }}</a> </li>
+          {% endif %}
           {% endfor %}
         </ul>
         {% endif %}
