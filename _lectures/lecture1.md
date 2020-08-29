@@ -69,7 +69,7 @@ On a modern Debian derived machine, `sudo apt update && sudo apt upgrade` will b
 
 * `git`. Mac has it preinstalled, on Linux you may need `apt install git`, on Windows you can install it via `choco install git` or [download the installer](https://git-scm.com/download/win). On Windows you will also need to tell git to use the system ssh client we're about to install - [follow this SA answer](https://stackoverflow.com/a/54657119) to do so.
 * `ssh`. Preinstalled on Mac and Linux. On Windows, click Start, Settings, Apps, Apps and Features, Manage Optional Features. If OpenSSH client is not already installed, click "Add a feature", type OpenSSH Client, and click install.
-* `ssh-agent`. Preinstalled and preactivated on Mac and most Linux desktops. On Windows, in an Administrator PowerShell session, you can run these three commands:
+* `ssh-agent`. Pre-installed and pre-activated on Mac and most Linux desktops. On Windows, in an Administrator PowerShell session, you can run these three commands:
   * `Set-Service ssh-agent -StartupType Automatic`
   * `Start-Service ssh-agent`
   * `Get-Service ssh-agent` (this just confirms that it is running)
@@ -119,6 +119,17 @@ Hi kaytwo! You've successfully authenticated, but GitHub does not provide shell 
 Connection to github.com closed.
 $
 ```
+
+## Using your ssh agent from git
+
+`git` on Windows is installed with its own ssh that it uses by default,
+so you'll need to override this if you want to use the provided ssh
+client and ssh agent, by setting the environment variable `GIT_SSH` to
+`C:\Windows\System32\OpenSSH\ssh.exe`. You can set environment variables
+in Windows by running "Edit the system environment variables" from the
+Start Menu, then click "Environment Variables..." and add the new
+variable - you can add it for just your user or for all users on a
+multi-user machine by setting it as a System variable.
 
 ## Using your ssh agent from WSL2
 
