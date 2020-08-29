@@ -1,6 +1,6 @@
 ---
 title: lab 2
-description: Doing git
+description: Turning in using Gradescope, pair evaluation
 layout: default
 due: Monday, August 31st 5pm Chicago time
 date: 2020-08-31
@@ -45,13 +45,7 @@ There are two main deliverables:
 
 When lab starts, you can look at [this page](page.pairings) to see who
 you will evaluate. There will be an "A" and a "B" evaluation: A runs
-from :15-:30, and B runs from :30-:50 of your lab session.
+from :10-:30 past the hour of your lab session, and B runs from :30-:50.
 
 If your evaluator or evaluatee isn't in lab, contact the TA and they
 will either pair you up with someone else or evaluate you.
-
-
-* [Dangit, git!](https://dangitgit.com/)
-* [Think Like (a) Git](http://think-like-a-git.net/)  
-* [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
-* [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/)

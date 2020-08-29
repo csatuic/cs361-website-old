@@ -6,10 +6,10 @@ grade late assignments, they earn zero credit.
 Gradescope deadlines are *precise* - an assignment is late if it was turned in one millisecond or
 one month late.
 
-Gradescope deadlines are *universal* - you must turn in your code, and whether you didn't turn it in
-because it wasn't compiling, or couldn't upload it to git, or couldn't upload it to gradescope. You
-can turn in homework assignments an unlimited number of times, so we recommend that you turn it in
-early and often.
+Gradescope deadlines are *universal* - you must turn in your code, and it doesn't matter whether you
+didn't turn it in because it wasn't compiling, or couldn't upload it to git, or couldn't upload it
+to gradescope. You can turn in homework assignments an unlimited number of times, so we recommend
+that you turn them in early and often.
 
 Because these deadlines are so rigid, by default we will not include your lowest exam, your lowest
 homework, and your two lowest lab, discussion, and quiz scores in your final grade for the class.
