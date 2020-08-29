@@ -43,6 +43,14 @@ There are two main deliverables:
    must record their score via [this form](page.eval_link).
 
 
+When lab starts, you can look at [this page](page.pairings) to see who
+you will evaluate. There will be an "A" and a "B" evaluation: A runs
+from :15-:30, and B runs from :30-:50 of your lab session.
+
+If your evaluator or evaluatee isn't in lab, contact the TA and they
+will either pair you up with someone else or evaluate you.
+
+
 * [Dangit, git!](https://dangitgit.com/)
 * [Think Like (a) Git](http://think-like-a-git.net/)  
 * [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
