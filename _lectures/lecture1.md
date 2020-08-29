@@ -21,7 +21,7 @@ render: true
 notes: |
     [MIT's missing semester](https://missing.csail.mit.edu/) module
     goes into these topics in a lot more detail.<br>For git specifically,
-    [Dangit, git](https://dangitgit.com/en) can be quite helpful.
+    [Dangit, git](https://dangitgit.com/en) can be quite helpful. 
 ---
 
 # Setting up the optimal programming environment for CS 361
