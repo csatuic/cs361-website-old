@@ -45,7 +45,7 @@ There are two main deliverables:
 
 When lab starts, you can look at [this page](page.pairings) to see who
 you will evaluate. There will be an "A" and a "B" evaluation: A runs
-from :10-:30 past the hour of your lab session, and B runs from :30-:50.
+from :05-:25 past the hour of your lab session, and B runs from :30-:50.
 
 If your evaluator or evaluatee isn't in lab, contact the TA and they
 will either pair you up with someone else or evaluate you.
