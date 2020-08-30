@@ -67,7 +67,6 @@ There are two main deliverables:
 
 ## Timing 
 
-<!-- When lab starts, you can look at [this page](page.pairings) to see who you will evaluate.  -->
 There will be an "A" and a "B" evaluation: A runs
 from :30-:40 past the hour of your lab session, and B runs from :40-:50.
 
