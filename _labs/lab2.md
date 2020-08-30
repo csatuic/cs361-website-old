@@ -20,7 +20,7 @@ There are two main deliverables:
 
   1. In the Blackboard Collaborate main room, make sure your SSH keys are added to your GitHub account. Go to the [this GitHub Classroom assignment]({{page.github_link}}) and accept the invite. For evaluation, you need to complete the Gradescope assignment for the lab, and demonstrate how you did that to your peer. All course assignments are visible from the [course Gradescope page]({{site.gradescope}}). Passing the gradescope assignment will be 1/4 of your lab grade for this week.
   
-  2. Once you've completed and submitted your lab on Gradescope, find your breakout room on [this sheet](page.pairings). Each tab on the sheet lists the breakout room number, the UIC email of the evaluator and evaluatee for the respective lab sessions. In your break out room, screen share with your evaluator and show them that you are able to
+  2. Once you've completed and submitted your lab on Gradescope, find your breakout room on [this sheet]({{page.pairings}}). Each tab on the sheet lists the breakout room number, the UIC email of the evaluator and the evaluatee for the respective lab sessions. In your break out room, screen share with your evaluator and show them that you are able to
    execute the homework submission workflow. You receive one point for
    each of:
       * Can clone a clean copy of their assignment GitHub repository using
