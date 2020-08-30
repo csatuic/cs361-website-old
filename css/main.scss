@@ -45,6 +45,16 @@ $on-laptop:        950px;
     }
 }
 
+.nav a{
+    
+  text-decoration: none;
+}
+
+a{
+    
+  text-decoration: underline;
+}
+
 ul.readinglist{
     padding-inline-start: 0px;
     li{

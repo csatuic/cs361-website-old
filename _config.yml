@@ -12,6 +12,7 @@ msteams: https://teams.microsoft.com/l/team/19%3a4fc12e999b3041439aa197a44f666a0
 
 
 dateformat: "%m/%d/%Y"
+timeformat: "%l:%M %p"
 future: true
 
 # render homework html files into the root directory
