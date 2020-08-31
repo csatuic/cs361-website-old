@@ -133,7 +133,7 @@ multi-user machine by setting it as a System variable.
 
 ## Using your ssh agent from WSL2
 
-Although Microsoft has put a lot of effort into making WSL2 and Windows feel like one machine, there are still places where that illusion breaks down. We need to forward our agent from Windows into WSL2
+Although Microsoft has put a lot of effort into making WSL2 and Windows feel like one machine, there are still places where that illusion breaks down. We need to forward our agent from Windows into WSL2.
 
 1. In WSL2, install `socat` using this command: `sudo apt install -y socat`.
 2. In your windows home directory, create a subdirectory called `.wsl` and save `npiperelay.exe`  (in Piazza resources section, or you can build it yourself [from source](https://github.com/jstarks/npiperelay)) in that new directory.

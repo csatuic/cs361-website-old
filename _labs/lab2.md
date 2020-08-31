@@ -58,7 +58,23 @@ There are two main deliverables:
    your assigned grading will earn you two points toward the lab.
 
 
-## Grading rubric
+## Peer evaluation rubric
+
+Peer evaluation for this lab is out of 3 points total. Here is how to
+assign points during peer evaluation:
+
+
+|task | points |
+|---|---|
+| Clone your lab2 repo | 1 point |
+| commit and push a change | 1 points |
+| Submit the new version via Gradescope | 1 points |
+| Total points | 3 points |
+{: class="table table-striped"}
+
+## Total grade calculation
+
+
 
 |task | points |
 |---|---|
