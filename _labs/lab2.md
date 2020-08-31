@@ -18,8 +18,10 @@ This lab is a test run for turning in the homeworks for this class, and
 a test run for doing the paired lab activities for this class.
 There are two main deliverables:
 
-  1. In the Blackboard Collaborate main room, make sure your SSH keys
-     are added to your GitHub account. Go to the [this GitHub Classroom
+  1. For the first half hour of the lab, we'll be helping people in the Blackboard Collaborate main
+     room to make sure your SSH keys
+     are working and added to your GitHub account. You can test that everything is working by
+     submitting the lab's Gradescope assignment: Go to the [this GitHub Classroom
      assignment]({{page.github_link}}) and accept the invite. The task
      is a super simple "write a program that returns 42" like in the
      video demo. For evaluation, you need to complete the process of
@@ -59,11 +61,12 @@ There are two main deliverables:
 ## Grading rubric
 
 |task | points |
+|---|---|
 |Turn in a Gradescope assignment that passes the tests | 2 points |
 | Demonstrate that you can clone, edit, push, and submit |3 points |
 | Evaluate another student | 2 points |
 | Total points | 7 points |
-
+{: class="table table-striped"}
 
 ## Timing 
 
