@@ -49,7 +49,7 @@ a lab machine, a local Linux VM, or elsewhere.
 This part will give you a quick introduction to using `readelf` to better
 understand the linking process.
 
-In this assignment, you must fill `hw1.c` and `hw1.h` with code which will:
+In this assignment, you must fill `hw1.c` with code which will:
 
 1. cause your UIC netID (and nothing else) to be printed on the first line of output when the program is run.
 3. cause `gcc -c -Wall hw1.c` and `gcc -Wall -o hw1 *.c` to issue zero warnings (and zero errors).
