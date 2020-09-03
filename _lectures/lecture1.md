@@ -137,6 +137,10 @@ Although Microsoft has put a lot of effort into making WSL2 and Windows feel lik
 
 1. In WSL2, install `socat` using this command: `sudo apt install -y socat`.
 2. In your windows home directory, create a subdirectory called `.wsl` and save `npiperelay.exe`  (in Piazza resources section, or you can build it yourself [from source](https://github.com/jstarks/npiperelay)) in that new directory.
+3. In a Linux shell, create a symlink from your Windows home directory to
+   your Linux home directory under the name `winhome`. If your Windows
+   home directory is `C:\Users\kaytw\`, then the easiest way to do this
+   is: `ln -s /mnt/c/Users/kaytw ~/winhome`
 3. In WSL2, add this text to the bottom of the file `~/.bashrc`:
 ```bash
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
