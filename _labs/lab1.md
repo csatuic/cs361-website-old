@@ -1,5 +1,5 @@
 ---
-title: lab 1
+title: week 1
 description: course intro
 layout: default
 due: Monday, August 24th 5pm Chicago time
