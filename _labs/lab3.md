@@ -1,13 +1,15 @@
 ---
 title: week 4 lab
-description: Using gdb, ltrace, strace
+description: Exam prep
 layout: default
 due: Monday, September 14th 5pm Chicago time
 date: 2020-09-14T17:00:00
 # notes get passed through markdownify
 eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA6tHsB0Jwq-i-LKhWJ1N9g/viewform
 skeleton_repo: csatuic/cs361-lab2-skeleton
-pairings: https://docs.google.com/spreadsheets/d/1MeqPYcCur8va0cEiMFVDv3-XMfOzLsFwMFwmEiqcrvs/
+pairings: https://docs.google.com/spreadsheets/d/1SAKFiHML88c3QdqlBkKhwyikNp11wajp7YzKFNpXHno/
+session_1_rubric: https://docs.google.com/document/d/1F7HpiP01XIg67D344auKhCeB8_BflukkjwvDqFnwIfM/edit?usp=sharing
+session_2_rubric: https://docs.google.com/document/d/1E0NGlZW81R-iUS6LBUUF2kSpvBlx-HNP0qrH3vrd4oE/
 
 ---
 
@@ -20,8 +22,8 @@ on the exam.
 There is one deliverable: conducting the peer assessment as we did two weeks ago based on the
 pairings listed on [this sheet]({{page.pairings}}). Each tab on the sheet lists the breakout room
 number, the UIC email of the grader and the person-being-graded for the respective lab sessions.
-Everyone that is evaluating in session 1 will have access to **this doc** that has the grading
-rubric for question 1, and everyone that is evaluating in session 2 will have access to **this doc**
+Everyone that is evaluating in session 1 will have access to [this doc]({{page.session_1_rubric}}) that has the grading
+rubric for question 1, and everyone that is evaluating in session 2 will have access to [this doc]({{page.session_2_rubric}})
 that has the grading rubric for question 2.
 
 
@@ -32,6 +34,22 @@ The grading for this lab is just one point. The grading for this assignment is _
 not purely "show up, get credit" - while these are complex questions with lots of answers, full
 credit should be given for anyone that is able to meaningfully hit any one of the points in the
 rubric.
+
+| Session | Question | Points |
+|---|---|---|
+| Session 1 | Explain why dynamic linking makes libraries easier to update. | 1 point |
+| Session 2 | Imagine a world without addends in relocation entries. What two features of relocation would no longer be possible and why? | 1 point |
+{: class="table table-striped"}
+
+## Total grade calculation
+
+
+
+| task | points |
+|---|---|
+| As an evaluator, ask your session question and evaluate their explanation | 1 point |
+| An an evaluatee, answer and give reasons for your answer to your session question | 1 point |
+{: class="table table-striped"}
 
 ## Timing 
 
