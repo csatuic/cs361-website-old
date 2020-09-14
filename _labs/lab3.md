@@ -41,9 +41,9 @@ rubric.
 | Session 2 | Imagine a world without addends in relocation entries. What two features of relocation would no longer be possible and why? | 1 point |
 {: class="table table-striped"}
 
+When you're the evaluator, make sure to record the response via [this form]({{page.eval_link}}).
+
 ## Total grade calculation
-
-
 
 | task | points |
 |---|---|
