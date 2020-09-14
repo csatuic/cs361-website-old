@@ -75,4 +75,4 @@ Both `secrets.txt` and `howto.txt` **must be submitted to Gradescope via GitHub*
 The first 4 are each worth 1 point each, the final one is worth 4 points. An additional 2 points will be given for correct howtos.
 
 ### Due Date
-This assignment is due {{ page.due }}. See the [syllabus](syllabus.html) for the late turn-in policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
+This assignment is due {{ page.due.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turn-in policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
