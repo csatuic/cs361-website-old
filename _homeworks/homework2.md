@@ -1,14 +1,12 @@
 ---
 title: homework 2
-layout: default
-tag: hw2-submission
-dir: hw2
-due: Monday, September 28, at 05:00 PM
-due_event: 
+due: 
     type: due
+    title: homework 2
     date: 2020-09-28T23:59:00-5:00
     description: 'Assignment #2 due'
 date: 2020-09-11
+github_link: https://classroom.github.com/a/8sIwSkyd
 ---
 
 ### {{ page.title }}: Inspecting Running Processes
@@ -26,7 +24,7 @@ Before you start, please make sure to set up your environment correctly. You hav
 
 In either case, when you run `whoami` command in the terminal, it should return your UIC NetID. Please note that if the result is different than your NetID, your secrets will not be accepted by the autograder. 
 
-The skeleton code for this assignment is available at [this link](https://classroom.github.com/a/8sIwSkyd). You must use GitHub classroom to write your code and keep a commit log on GitHub. You will submit your files via [Gradescope](https://www.gradescope.com/).
+The skeleton code for this assignment is available at [this link]({{page.github_link}}). You must use GitHub classroom to write your code and keep a commit log on GitHub. You will submit your files via [Gradescope]({{site.gradescope}}).
 
 Your task will be to fill out two files in your personal repository called `secrets.txt` and `howto.txt`. 
 
