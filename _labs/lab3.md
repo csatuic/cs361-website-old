@@ -37,8 +37,8 @@ rubric.
 
 | Session | Question | Points |
 |---|---|---|
-| Session 1 | Explain why dynamic linking makes libraries easier to update. | 1 point |
-| Session 2 | Imagine a world without addends in relocation entries. What two features of relocation would no longer be possible and why? | 1 point |
+| Session 1 | Imagine a world without addends in relocation entries. What two features of relocation would no longer be possible and why? | 1 point |
+| Session 2 | Explain why dynamic linking makes libraries easier to update. | 1 point |
 {: class="table table-striped"}
 
 When you're the evaluator, make sure to record the response via [this form]({{page.eval_link}}).
