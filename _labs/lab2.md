@@ -1,5 +1,5 @@
 ---
-title: lab 2
+title: week 2 lab
 description: Turning in using Gradescope, pair evaluation
 layout: default
 due: Monday, August 31st 5pm Chicago time
