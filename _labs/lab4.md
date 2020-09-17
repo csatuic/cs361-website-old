@@ -6,12 +6,20 @@ due: Monday, September 21st 5pm Chicago time
 date: 2020-09-21T17:00:00
 # notes get passed through markdownify
 github_link: https://github.com/uicsystems/LabSession2-PracticeCode
-eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA6tHsB0Jwq-i-LKhWJ1N9g/viewform
 # skeleton_repo: csatuic/cs361-lab2-skeleton
-# pairings: https://docs.google.com/spreadsheets/d/1SAKFiHML88c3QdqlBkKhwyikNp11wajp7YzKFNpXHno/
+pairings: https://docs.google.com/spreadsheets/d/1SAKFiHML88c3QdqlBkKhwyikNp11wajp7YzKFNpXHno/
 ---
 
-# gdb
+<!-- TODO: think of demonstration points -->
+<!-- TODO: gradescope link -->
+<!-- TODO: eval form link -->
+
+# Lab 4: {{page.description}}
+In this lab, you will explore some debugging tools which are helpful when trying to debug a fully compiled executable. 
+The lab has two deliverables
+The lab needs you to work on your first, and then do a recap as the paired lab activity. You can find your pairings for the lab in [this sheet]({{page.pairings}}).
+
+## gdb
 
 1.  Before we begin, log in to `systems[1-4].cs.uic.edu` or your docker devcontainer, and check out the [github repository]({{page.github_link}}) which contains the practice code for this lab session. For this practice session, we are giving you the source code for the files you will be practicing on - in the homework, you will get only the binaries.
 
@@ -41,7 +49,7 @@ eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA
     gradescope.
 <!-- <br/><br/> -->
 
-# strace
+## strace
 
 1.  strace is a debugging program that tells you all of the **system
     calls** a program makes. System calls are requests a program makes
@@ -78,7 +86,7 @@ eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA
 
 6.  Answer the questions about strace on gradescope.
 
-# ltrace
+## ltrace
 
 1.  ltrace is much the same as strace, except that it prints out calls
     to shared libraries, rather than system calls.
@@ -92,3 +100,31 @@ eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA
 5.  Answer the questions about ltrace on gradescope.
 
 <!-- 6.  You should now be able to find the secret codes for binaries 0-3 in homework 2. We will go over what you need for binary 4 next week. -->
+
+## Peer evaluation rubric
+
+Please grade your peers out of **2 points** using [this form]({{site.eval_link}}).
+
+| Session | Task | Points |
+|---|---|---|
+| Session A | Walk through the process of finding answers for the gdb questions | 2 points |
+| Session B | Demonstrate the commands and their outputs that lead you to the strace and ltrace answers | 2 points |
+{: class="table table-striped"}
+
+## Total grade calculation
+
+| Task | Points |
+|---|---|
+| Turn in a Gradescope assignment | 1 points |
+| Demonstrate your approach to finding the answers | 2 points |
+| Evaluating another student | 2 points |
+| Total points | 5 points |
+{: class="table table-striped"}
+
+## Timing 
+
+Start exploring the tools on the practice code individually as soon as the lab section starts. Session A run from 30:40 and session B will run from 40:50. 
+
+If your grader isn't in lab, contact the TA and they will either pair you up with someone else or evaluate you. If the person you are in charge of grading isn't in the lab, you can evaluate a TA.
+
+You can **only** evaluate/be evaluated by the person who you are assigned, **or** someone that the TA has designated. Anyone who submits an evaluation besides this will receive a zero for the lab. You will only receive points if you show up in your registered lab section.
