@@ -20,7 +20,7 @@ In the last homework you looked at the symbol table of your own compiled program
 Before you start, please make sure to set up your environment correctly. You have two options for this homework:
 
 1. Use `systems[1-4].cs.uic.edu` (e.g. systems1, systems2, etc.), or
-2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).**
+2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).** After opening the workspace in the container, please install `ltrace` and `strace` using `sudo apt install ltrace strace -y`. 
 
 In either case, when you run `whoami` command in the terminal, it should return your UIC NetID. Please note that if the result is different than your NetID, your secrets will not be accepted by the autograder. 
 
