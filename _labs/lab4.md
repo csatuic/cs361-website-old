@@ -98,12 +98,12 @@ The lab has two deliverables. First, you need to work on your own and complete t
 
 ## Peer evaluation rubric
 
-Please grade your peers out of **2 points** using [this form]({{site.eval_link}}).
+Please grade your peers out of **3 points** using [this form]({{site.eval_link}}).
 
 | Session | Task | Points |
 |---|---|---|
-| Session A | Walk through the steps of getting answers for question 1, 2 & 3 | 3 points |
-| Session B | Walk through the steps of getting answers for question 4, 5 & 6 | 3 points |
+| Session A | Walk through the steps of getting answers for question 1, 2 & 3 | 3 points (1 point for each question) |
+| Session B | Walk through the steps of getting answers for question 4, 5 & 6 | 3 points (1 point for each question) |
 {: class="table table-striped"}
 
 ## Total grade calculation
