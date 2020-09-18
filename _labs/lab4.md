@@ -7,17 +7,12 @@ date: 2020-09-21T17:00:00
 # notes get passed through markdownify
 github_link: https://github.com/uicsystems/LabSession2-PracticeCode
 # skeleton_repo: csatuic/cs361-lab2-skeleton
-pairings: https://docs.google.com/spreadsheets/d/1SAKFiHML88c3QdqlBkKhwyikNp11wajp7YzKFNpXHno/
+pairings: https://docs.google.com/spreadsheets/d/1WiKQJ4jW1JqdZipR1zNV-zuUlgqg6FU38Kj6VgjLryk/
 ---
-
-<!-- TODO: think of demonstration points -->
-<!-- TODO: gradescope link -->
-<!-- TODO: eval form link -->
 
 # Lab 4: {{page.description}}
 In this lab, you will explore some debugging tools which are helpful when trying to debug a fully compiled executable. 
-The lab has two deliverables
-The lab needs you to work on your first, and then do a recap as the paired lab activity. You can find your pairings for the lab in [this sheet]({{page.pairings}}).
+The lab has two deliverables. First, you need to work on your own and complete the Lab 4 assignment on [Gradescope]({{site.gradescope}}). Second, you would do a recap of the activities with your partner. You can find your pairings for the lab in [this sheet]({{page.pairings}}).
 
 ## gdb
 
@@ -107,18 +102,18 @@ Please grade your peers out of **2 points** using [this form]({{site.eval_link}}
 
 | Session | Task | Points |
 |---|---|---|
-| Session A | Walk through the process of finding answers for the gdb questions | 2 points |
-| Session B | Demonstrate the commands and their outputs that lead you to the strace and ltrace answers | 2 points |
+| Session A | Walk through the steps of getting answers for question 1, 2 & 3 | 3 points |
+| Session B | Walk through the steps of getting answers for question 4, 5 & 6 | 3 points |
 {: class="table table-striped"}
 
 ## Total grade calculation
 
 | Task | Points |
 |---|---|
-| Turn in a Gradescope assignment | 1 points |
-| Demonstrate your approach to finding the answers | 2 points |
-| Evaluating another student | 2 points |
-| Total points | 5 points |
+| Turn in a Gradescope assignment | 3 points |
+| Demonstrate your approach to finding the answers | 3 points |
+| Evaluating another student | 3 points |
+| Total points | 9 points |
 {: class="table table-striped"}
 
 ## Timing 
