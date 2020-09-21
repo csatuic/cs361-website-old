@@ -5,7 +5,7 @@ layout: default
 due: Monday, September 21st 5pm Chicago time
 date: 2020-09-21T17:00:00
 # notes get passed through markdownify
-github_link: https://github.com/uicsystems/LabSession2-PracticeCode
+github_link: https://classroom.github.com/a/p0Ti_oZO
 # skeleton_repo: csatuic/cs361-lab2-skeleton
 pairings: https://docs.google.com/spreadsheets/d/1WiKQJ4jW1JqdZipR1zNV-zuUlgqg6FU38Kj6VgjLryk/
 ---
@@ -16,7 +16,7 @@ The lab has two deliverables. First, you need to work on your own and complete t
 
 ## gdb
 
-1.  Before we begin, log in to `systems[1-4].cs.uic.edu` or your docker devcontainer, and check out the [github repository]({{page.github_link}}) which contains the practice code for this lab session. For this practice session, we are giving you the source code for the files you will be practicing on - in the homework, you will get only the binaries.
+1.  Before we begin, log in to `systems[1-4].cs.uic.edu` or your docker devcontainer, and accept the assignment at [this github classroom link]({{page.github_link}}) which contains the practice code for this lab session. For this practice session, we are giving you the source code for the files you will be practicing on - in the homework, you will get only the binaries.
 
 2.  Run make to compile the code.
 
