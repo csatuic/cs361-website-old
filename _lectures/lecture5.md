@@ -6,7 +6,8 @@ contents:
     - "Book: 8.3-8.4"
     - name: strace zine
       link: https://jvns.ca/strace-zine-v3.pdf
-    - System calls
+    - name: fork/exec/posix_spawn/clone
+      link: https://www.youtube.com/watch?v=uRYyj8tcDTE
 
 ---
 
