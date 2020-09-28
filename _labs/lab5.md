@@ -13,7 +13,7 @@ In this lab, you will learn how to create and use dynamic libraries which helps 
 
 ## Setting up your environment
 
-1. Before we begin, accept the assignment at [this github classroom link]({{page.github_link}}). The github repository contains the practice code for this lab session. Check out the repository after logging in to systems[1-4].cs.uic.edu or opening your workspace in the development container. 
+1. Before we begin, accept the assignment at [this github classroom link]({{page.github_link}}). The github repository contains the practice code for this lab session. Check out the repository after logging in to systems[1-4].cs.uic.edu or clone the repository and open your workspace in the development container. 
 2. Run `make` to create the compiled binary executable `uselib`. Try running it with `./uselib`. You should get an error that says "./uselib: error while loading shared libraries: libsess3.so: cannot open shared object file: No such file or directory".
 3. This error is telling you that your runtime environment cannot find the shared library `libsess3.so` that the `uselib` executable depends on. In order to tell it where to look for this library, you will need to set the `LD_LIBRARY_PATH` environment variable. To do this, run the command `export LD_LIBRARY_PATH=<your current directory>:$LD_LIBRARY_PATH` with `<your current directory>` changed appropriately. You can use `PWD` environment variable which points to the current directory: `export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH`
 4. If you rerun `./uselib` it should now run.
