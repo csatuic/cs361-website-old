@@ -4,6 +4,8 @@ date: 2020-09-28T8:00:00-5:00
 title: Signals & Shells
 contents:
     - "Book: 8.5"
+    - name: "Signals"
+      link: https://www.youtube.com/watch?v=RU0ULe2f6hI
 
 ---
 
