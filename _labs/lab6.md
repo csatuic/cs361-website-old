@@ -6,7 +6,7 @@ due: Monday, October 5th 5pm Chicago time
 date: 2020-10-05T17:00:00
 # notes get passed through markdownify
 github_link: https://classroom.github.com/a/R7pM_QQW
-pairings: https://docs.google.com/spreadsheets/d/1NiJvcERiIKGsZDYW4WBEhy6d7eeiB2V99xrSjGkyPg0/
+pairings: https://docs.google.com/spreadsheets/d/1aDhmwnsBxdncsRgVD9pffNOm4_yM3I0dvijhO0Cs0wo/
 ---
 
 # Introduction to Homework 3
