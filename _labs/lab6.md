@@ -131,10 +131,18 @@ cat < list of files
 
 ## What you need to do for this lab
 
-You can find your pairings for the lab in [this sheet]({{page.pairings}}). 
+You can find your pairings for the lab in [this sheet]({{page.pairings}}).
 
 The peer explanations for this lab are:
 
-1. Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs
-   "echo hello world."
-2. Show your evaluator what you did to switch `fork` with `posix_spawnp` to run a child process.
+<!-- 1. Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs -->
+   <!-- "echo hello world." -->
+<!-- 2. Show your evaluator what you did to switch `fork` with `posix_spawnp` to run a child process. -->
+
+| Session | Task | Points |
+|---|---|---|
+| Session A | Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs "echo hello world." | 1 point |
+| Session B | Show your evaluator what you did to switch `fork` with `posix_spawnp` to run a child process. | 1 point |
+{: class="table table-striped"}
+
+Please grade your peers out of **1 point** using [this form]({{site.eval_link}}).
