@@ -3,7 +3,7 @@ title: homework 4
 due: 
     type: due
     title: homework 4
-    date: 2020-10-14T23:59:00-5:00
+    date: 2020-11-06T23:59:00-5:00
     description: 'Assignment #4 due'
 date: 2020-10-21
 github_link: https://classroom.github.com/a/YrW0d9kf
