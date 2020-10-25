@@ -171,7 +171,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
 
 4.  That’s it!  That’s all the code you write!  However, this assignment can be very tricky anddifficult to debug.  Start working on it right away to avoid running out of time!  I recommendimplementing the `is_pointer` function, then `walk_region_and_mark`, then `sweep`.
 
-5.  Don’t know where to start?  Try reading about the mark and sweep algorithm in section 9.9 of the book.
+5.  Don’t know where to start?  Try reading about the mark and sweep algorithm in section 9.10 of the book.
 
 
 # Peer evaluation rubric
@@ -190,6 +190,7 @@ You can find your pairings for the lab in [this sheet]({{page.pairings}}). Pleas
 | Task | Points |
 |---|---|
 | Turn in a Gradescope assignment | 6 points |
-| Evaluate another student | 1 points |
-| Total points | 7 points |
+| Discuss your answers | 1 point |
+| Evaluate another student | 1 point |
+| Total points | 8 points |
 {: class="table table-striped"}
