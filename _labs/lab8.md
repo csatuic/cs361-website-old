@@ -2,7 +2,7 @@
 title: week 10 lab
 description: Garbage Collection 
 layout: default
-due: Monday, October 12th 5pm Chicago time
+due: Monday, October 26th 5pm Chicago time
 date: 2020-10-26
 # notes gets passed through markdownify
 pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZoCwk7fIX0sK_s/edit?usp=sharing
