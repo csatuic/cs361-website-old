@@ -165,7 +165,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
 
 1. `sweep()` This is the function that will sweep through your heap, freeing anything that is not marked.
 
-2. `ispointer(void* ptr)` This is a helper function you will write to help with marking.  Given a number, it should either return 0 if the number is not an address on the heap, or return the pointer to the chunk that holds the address that the pointer passed in as a parameter points to.
+2. `is_pointer(void* ptr)` This is a helper function you will write to help with marking.  Given a number, it should either return 0 if the number is not an address on the heap, or return the pointer to the chunk that holds the address that the pointer passed in as a parameter points to.
 
 3. `walk_region_and_mark(void* start, void* end)` This is the function that will go through the data and stack sections, finding pointers and marking the blocks they point to.
 
