@@ -90,7 +90,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
     familiarize yourself with the skeleton code. You will be working
     with the code in `hw4.c` - this is where all of your garbage collector
     functionality will go. Additionally, we provide you with `main.c` and
-    `debugmain.c` for testing, and a `Makefile`. Start by looking in `hw4.c`.
+    `debug_main.c` for testing, and a `Makefile`. Start by looking in `hw4.c`.
 
 2.  Let's start by looking at the helper function `hw4.c` provides you for
     working with the malloc memory chunks. First, note that it defines
@@ -126,7 +126,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
             return *(unsigned int *)(c) & 0x1;
         }
 
-    Here, we dereference the pointer c passed into the function before bitwise ANDing it with 1.What does the pointer point to?  When will this return 0?  When will it return 1?  Answer the question on `inuse` on Gradescope.
+    Here, we dereference the pointer c passed into the function before bitwise ANDing it with 1.What does the pointer point to?  When will this return 0?  When will it return 1?  Answer the question on `in_use` on Gradescope.
 
 
 # Skeleton Code: Marking
@@ -147,7 +147,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
 
 # Finding .data, heap, and stack
 
-1.  For  the  mark  part  of  the  code,  you  will  need  to  scan  the  .data  section  and  stack  to  findpointers,  while  in  the  sweep  section,  you  will  need  to  go  through  all  of  the  chunks  on  the heap.  We set up start and end points of all of these sections for you in two functions:  `initgc()`, and `gc()`.  `initgc()` will always be called first, before we allocate any memory or call the garbage collector, while gc will be called whenever we want to garbage collect.
+1.  For  the  mark  part  of  the  code,  you  will  need  to  scan  the  .data  section  and  stack  to  findpointers,  while  in  the  sweep  section,  you  will  need  to  go  through  all  of  the  chunks  on  the heap.  We set up start and end points of all of these sections for you in two functions:  `init_gc()`, and `gc()`.  `init_gc()` will always be called first, before we allocate any memory or call the garbage collector, while gc will be called whenever we want to garbage collect.
 
         void init_gc() {
             size_t stack_var;
@@ -156,7 +156,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
             stack_mem.end=(size_t *)&stack_var;
         }
 
-    Both  `initgc()`  and  `gc()`  use  a  local  variable  to  find  where  they  are  on  the  stack.   This  works because local variables are always on the stack, and since we know `initgc()` is our first function to be called, we can use it demarcate the beginning of the stack.  Likewise, we call `malloc()` in `initgc()` to find the beginning of the heap.  (`init_global_range()` uses some linux features to find the .data section.  It is to complicated to discuss here, but feel free to ask Professor Kanich if you have questions about it.)  All `initgc()` does is set up the start of each memory section we are interested in.
+    Both  `init_gc()`  and  `gc()`  use  a  local  variable  to  find  where  they  are  on  the  stack.   This  works because local variables are always on the stack, and since we know `initgc()` is our first function to be called, we can use it demarcate the beginning of the stack.  Likewise, we call `malloc()` in `init_gc()` to find the beginning of the heap.  (`init_global_range()` uses some linux features to find the .data section.  It is to complicated to discuss here, but feel free to ask Professor Kanich if you have questions about it.)  All `init_gc()` does is set up the start of each memory section we are interested in.
 
 2.   The `gc()` function both finds the ends of the heap and stack, and calls the functions you willbe implementing in order to do garbage collection.
 
