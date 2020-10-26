@@ -23,7 +23,8 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
     [here](https://code.woboq.org/userspace/glibc/malloc/malloc.c.html).
 
 4.  After reading the excerpt below, answer the question about it on
-    Gradescope.
+    Gradescope. **Note** that the following representation of a chunk is 
+    different from the one used in the homework.
 
         An allocated chunk looks like this:
 
@@ -156,7 +157,7 @@ pairings: https://docs.google.com/spreadsheets/d/1kb4X8vTp8mZe9--08sxvC6CEhYk6JZ
             stack_mem.end=(size_t *)&stack_var;
         }
 
-    Both  `init_gc()`  and  `gc()`  use  a  local  variable  to  find  where  they  are  on  the  stack.   This  works because local variables are always on the stack, and since we know `initgc()` is our first function to be called, we can use it demarcate the beginning of the stack.  Likewise, we call `malloc()` in `init_gc()` to find the beginning of the heap.  (`init_global_range()` uses some linux features to find the .data section.  It is to complicated to discuss here, but feel free to ask Professor Kanich if you have questions about it.)  All `init_gc()` does is set up the start of each memory section we are interested in.
+    Both  `init_gc()`  and  `gc()`  use  a  local  variable  to  find  where  they  are  on  the  stack.   This  works because local variables are always on the stack, and since we know `init_gc()` is our first function to be called, we can use it demarcate the beginning of the stack.  Likewise, we call `malloc()` in `init_gc()` to find the beginning of the heap.  (`init_global_range()` uses some linux features to find the .data section.  It is to complicated to discuss here, but feel free to ask Professor Kanich if you have questions about it.)  All `init_gc()` does is set up the start of each memory section we are interested in.
 
 2.   The `gc()` function both finds the ends of the heap and stack, and calls the functions you willbe implementing in order to do garbage collection.
 
