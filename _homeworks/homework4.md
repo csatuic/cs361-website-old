@@ -64,9 +64,13 @@ Runtime performance is not a major goal for this homework. However if your progr
 
 **You should only make changes to `hw4.c` in the areas marked TODO.**
 
-Finally, *make sure you do not output anything extra in your implementations*. 
-<!-- This will break the autograder. -->
+Finally, *make sure you do not output anything extra in your implementations*. This will break the autograder.
 
-<!-- ### Grading -->
+### Grading
 
+The completed assignment should be turned in via [Gradescope]({{site.gradescope}}) as with other homework assignments. Please test your code before turning it in and do not use the autograder as a debugging tool.
 <!-- You can start the assignment via the invite link at the top of the page. It should be turned in via [Gradescope](https://www.gradescope.com/courses/61518) as with other homework assignments. -->
+
+### Due Date
+
+The assignment is due {{ page.due.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turn-in policy.
