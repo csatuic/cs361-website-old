@@ -14,19 +14,19 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
 
 2.  `debug_main.c` has a simple method to test if your code is working.
     Its `main` method looks like this:
+```c
+int main(int argc, char** argv) {
 
-        int main(int argc, char** argv) {
+    init_gc();
 
-          init_gc();
+    for (int i=0;i<MAX_ALLOCATIONS;i++)
+    allocs[i]=my_malloc(i*2+128);
 
-          for (int i=0;i<MAX_ALLOCATIONS;i++)
-            allocs[i]=my_malloc(i*2+128);
-
-          for (int i=0;i<MAX_ALLOCATIONS;i++)
-            allocs[i] = 0;
-          gc();
-        }
-
+    for (int i=0;i<MAX_ALLOCATIONS;i++)
+    allocs[i] = 0;
+    gc();
+}
+```
 4.  This code allocates 1000 pointers, and then deallocates them all and
     calls the garbage collector. Its `my_malloc` method will print out
     information about the chunk every time it is called. Note that we
@@ -39,112 +39,112 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
 1.  Now let's look at the `main` method in `main.c`. It starts by
     running the same allocated and deallocate tests as in 
     `debug_main.c`. Then, we see this code:
+    
+    ```c
+    /* allocations which all point to each other. 
+    this checks for proper traversal of the chunk graph. */
+    for(int i=0;i<MAX_ALLOCATIONS;i++) {
+        allocs[i]=malloc(i*2+128);
+        if(i>0)
+            *(void**)(allocs[i])=allocs[i-1];
+    }
+    printf("Heap after second round of allocations: %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
+    for(int i=0;i<MAX_ALLOCATIONS-1;i++)
+        allocs[i]=0;
 
-         /* allocations which all point to each other. 
-         this checks for proper traversal of the chunk graph. */
-                for(int i=0;i<MAX_ALLOCATIONS;i++) {
-                        allocs[i]=malloc(i*2+128);
-                        if(i>0)
-                                *(void**)(allocs[i])=allocs[i-1];
-                }
-                printf("Heap after second round of allocations: %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-                for(int i=0;i<MAX_ALLOCATIONS-1;i++)
-                        allocs[i]=0;
+    gc();
+    // here, since we keep the last entry, which points to the next-to-last 
+    //and so on, everything should still be around                                                                                                               
+    printf("Heap after clearing all but one, and gc(): %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
 
-                gc();
-                // here, since we keep the last entry, which points to the next-to-last 
-                //and so on, everything should still be around                                                                                                               
-                printf("Heap after clearing all but one, and gc(): %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-
-                allocs[MAX_ALLOCATIONS-1]=0;
-                gc();
-                printf("Heap after clearing last one, and gc(): %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-
+    allocs[MAX_ALLOCATIONS-1]=0;
+    gc();
+    printf("Heap after clearing last one, and gc(): %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
+    ```
 2.  What should print after our first garbage collection call? What
     about the second?
 
 3.  Answer the question on `main.c` on Gradescope.
 
-4.  Next, we see
+4.  Next, we see:
+    ```c
+    /* allocations which all point to each other. this checks for 
+    proper traversal of the chunk graph. */
+    for(int i=0;i<MAX_ALLOCATIONS;i++) {
+        allocs[i]=malloc(i*2+128);
+        if(i>0) {
+            void *start_of_new_alloc = allocs[i];
+            void *start_of_prev_alloc = allocs[i-1];
 
-         /* allocations which all point to each other. this checks for 
-         proper traversal of the chunk graph. */
-                for(int i=0;i<MAX_ALLOCATIONS;i++) {
-                        allocs[i]=malloc(i*2+128);
-                        if(i>0) {
-                                void *start_of_new_alloc = allocs[i];
-                                void *start_of_prev_alloc = allocs[i-1];
+            int offset_into_new_alloc = 8*random_up_to((i*2+120)/8);
+            int offset_into_old_alloc = 8*random_up_to(((i-1)*2+120)/8);
+            void **location_of_pointer = (void**)(start_of_new_alloc 
+                                    + offset_into_new_alloc);
 
-                                int offset_into_new_alloc = 8*random_up_to((i*2+120)/8);
-                                int offset_into_old_alloc = 8*random_up_to(((i-1)*2+120)/8);
-                                void **location_of_pointer = (void**)(start_of_new_alloc 
-                                                        + offset_into_new_alloc);
+            *location_of_pointer = start_of_prev_alloc 
+                                + offset_into_old_alloc;
+        }
+    }
+    printf("Heap after third round of allocations: %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
+    for(int i=0;i<MAX_ALLOCATIONS-1;i++)
+        allocs[i]=0;
+    gc();
+    // here, since we keep the last entry, which points to the next-to-last 
+    //and so on, everything should still be around                                                                                                               
+    printf("Heap after clearing all but one, and gc(): %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
 
-                                *location_of_pointer = start_of_prev_alloc 
-                                                    + offset_into_old_alloc;
-                        }
-                }
-                printf("Heap after third round of allocations: %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-                for(int i=0;i<MAX_ALLOCATIONS-1;i++)
-                        allocs[i]=0;
-                gc();
-                // here, since we keep the last entry, which points to the next-to-last 
-                //and so on, everything should still be around                                                                                                               
-                printf("Heap after clearing all but one, and gc(): %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-
-                allocs[MAX_ALLOCATIONS-1]=0;
-                gc();
-                printf("Heap after clearing last one, and gc(): %zu, free %d, inuse %d\n",
-                heap_size(),free_chunks(),inuse_chunks());
-
+    allocs[MAX_ALLOCATIONS-1]=0;
+    gc();
+    printf("Heap after clearing last one, and gc(): %zu, free %d, inuse %d\n",
+    heap_size(),free_chunks(),inuse_chunks());
+    ```
 5.  What should print after our first gc call here? What about the
     second?
 
 6.  Next, we call the following method:
+    ```c
+    /* this keeps pointers strictly on the stack, so at i==50, 
+    we'll have allocated 100 chunks, and gc'd... 49? */
+    void* recursive_allocations(int i) {
+        void* ptr = malloc(i*100+128);
+        if(i==0) return ptr;
 
-                /* this keeps pointers strictly on the stack, so at i==50, 
-                we'll have allocated 100 chunks, and gc'd... 49? */
-        void* recursive_allocations(int i) {
-                void* ptr = malloc(i*100+128);
-                if(i==0) return ptr;
-
-                void *ptr2 = recursive_allocations(i-1);
-                if(i==50) {
-                        gc();
-                        printf("Recursive1: at depth 50, %zu, free %d, inuse %d\n",
-                        heap_size(),free_chunks(),inuse_chunks());
-                }
-                return ptr;
+        void *ptr2 = recursive_allocations(i-1);
+        if(i==50) {
+            gc();
+            printf("Recursive1: at depth 50, %zu, free %d, inuse %d\n",
+            heap_size(),free_chunks(),inuse_chunks());
         }
-
+        return ptr;
+    }
+```
 7.  What should be allocated/free when we call the garbage collector at
     round 50? How about when we call it after the method returns?
 
 8.  Answer the question on `main.c 2` on Gradescope.
 
 9.  Next, we run this code:
+    ```c
+    /* here the returned pointer is stored in our local allocation 
+    before we return. Hence at depth 50, we're not able to GC anything. */
+    void* recursive_allocations2(int i) {
+        void** ptr = malloc(i*100+128);
+        if(i==0) return ptr;
 
-            /* here the returned pointer is stored in our local allocation 
-            before we return. Hence at depth 50, we're not                                                                                                                              
-                 able to GC anything. */
-        void* recursive_allocations2(int i) {
-                void** ptr = malloc(i*100+128);
-                if(i==0) return ptr;
-
-                *ptr = recursive_allocations2(i-1);
-                if(i==50) {
-                        gc();
-                        printf("Recursive2: At depth 50, %zu, free %d, inuse %d\n",
-                        heap_size(),free_chunks(),inuse_chunks());
-                }
-                return ptr;
+        *ptr = recursive_allocations2(i-1);
+        if(i==50) {
+                gc();
+                printf("Recursive2: At depth 50, %zu, free %d, inuse %d\n",
+                heap_size(),free_chunks(),inuse_chunks());
         }
-
+        return ptr;
+    }
+```
 10. Note that in this code, the returned pointer from the recursive call
     is stored on the heap, not the stack. Since we don't free it, it
     should still be on the heap after the function returns. What should
@@ -173,7 +173,7 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
     class so that instead of just marking from one pointer, it takes a
     start and end address, and performs the operations below on every
     pointer within that range.
-
+```c
         void mark(ptr p) {
            if (b == is_ptr(p) == NULL)      return;        
            if (markBitSet(b)) return;     
@@ -182,10 +182,10 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
              mark(b[i]);           
            return;
         }      
-
+```
 4.  `sweep` should be almost identical to the psuedo code we went 
     over in class. (It is below, in case you don't remember from the lecture)
-
+```c
         ptr sweep(ptr p, ptr end) {
            while (p < end) {
            if blockMarked(p)
@@ -195,9 +195,9 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
               p = nextBlock(p);
               }     
         }
-
+```
 ## What your output should look like if your code is correct 
-
+```
     Heap before first round of allocations: 0, free 0, inuse 0
     Heap after first round of allocations: 8048656, free 1, inuse 4000
     Heap after gc, before wiping out allocs array: 8048656, free 1, inuse 495
@@ -215,7 +215,7 @@ pairings: https://docs.google.com/spreadsheets/d/1d4FtYGon0xIoe_v4LzSjA-Iqb27npa
     Before GC halfway deep in Recursive2: At depth 50, 16556848, free 1, inuse 101
     After: 16556848, free 1, inuse 101
     After Recursive2 16556848, free 1, inuse 0
-
+```
 The numbers you should worry about are the `inuse` and `free` numbers.
 
 ## Peer evaluation rubric
