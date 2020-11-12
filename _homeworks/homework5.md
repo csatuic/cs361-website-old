@@ -4,14 +4,15 @@ due:
     type: due
     title: homework 5
     date: 2020-11-23T23:59:00-5:00
+    due: Monday, November 23rd 11:59pm Chicago time
     description: 'Assignment #5 due'
 date: 2020-11-23
 github_link: https://classroom.github.com/a/YrW0d9kf
 ---
 
-### {{page.title}}: A Home-Brew Web Server
+## {{page.title}}: A Home-Brew Web Server
 
-#### This homework will be due {{ page.due }}
+### This homework is be due on {{page.due.due}}
 
 This homework has the following learning objectives:
 * Learn how to follow a network protocol (in this case, http)
@@ -29,36 +30,39 @@ In this homework, we'll look at the HTTP protocol as a Web server. After accepti
 
 Your server program will receive two arguments: 1) the port number it should listen on for incoming connections, and 2) the directory out of which it will serve files (often called the document root in production Web servers). For example:
 
-```
+```bash
 $ ./homework5 8080 WWW
 ```
 
-This command will tell your Web server to listen for connections on port 8080 and serve files out of the WWW directory. That is, the WWW directory is considered '/' when responding to requests. For example, if you're asked for /index.html, you should respond with the file that resides in WWW/index.html. If you're asked for /dir1/dir2/file.ext, you should respond with the file WWW/dir1/dir2/file.ext.
+This command will tell your Web server to listen for connections on port 8080 and serve files out of the `WWW` directory. That is, the `WWW` directory is considered `/` when responding to requests. For example, if you're asked for `/index.html`, you should respond with the file that resides in `WWW/index.html`. If you're asked for `/dir1/dir2/file.ext`, you should respond with the file `WWW/dir1/dir2/file.ext`.
 
 #### Requirements
 
 Your server should handle the following cases:
 
-1. Serve requested files out of the specified directory. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. 
-2. If the requested file does not exist, you should respond with a 404 error code and a readable error page containing some basic HTML. 
+1. Serve requested files out of the specified directory. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to provide the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
+2. If the requested file does not exist, you should respond with a **404** error code and a readable error page containing some basic HTML. 
 3. If the path requested by the client is a directory, you should handle the request as if it was for the file `index.html` inside that directory. You do not need to handle the case where the directory does not contain `index.html` file. Hint: use the `stat()` system call to determine if a path is a directory or a file. The `st_mode` field in the stat struct has what you need.
-4. Common Gateway Interface (CGI) is a protocol for a web server to serve dynamic content using command-line interface programs. Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client.
+4. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client.
 
 #### Bonus Point
 
-- If your server handles the proper HTTP Content-Type header in the response based on the file ending, you will receive a bonus point. We will test `html`, `txt`, `jpeg`, `gif`, `png`, and `pdf` file extensions.
+- Handling HTTP Content-Type headers for additional file types provided in the `WWW` directory, like `txt`, `gif`, `png`, and `pdf` will earn you 2 bonus points.
+<!-- If your server handles the proper HTTP Content-Type header in the response based on the file ending, you will receive a bonus point. We will test `txt`, `gif`, `png`, and `pdf` file extensions. -->
 
-When testing, you should be able to retrieve byte-for-byte copies of files from your server. Use wget or curl to fetch files and md5sum or diff to compare the fetched file with the original. We will grade using this method. *For full credit, the files need to be exact replicas of the original.*
+When testing, you should be able to retrieve byte-for-byte copies of files from your server. Use `wget` or `curl` to fetch files and `md5sum` or `diff` to compare the fetched file with the original. We will grade using this method. *For full credit, the files need to be exact replicas of the original.*
 
 #### Grading Rubric
 
 This assignment is worth 10 points in total and 2 additional bonus points:
 
-* 3 points for serving exact copies of text and binary files to command line clients like wget or curl. The MD5 sums should match!
-* 2 point for correctly returning a 404 error code and HTML message when a request asks for a file that does not exist.
-* 2 point for serving index.html, if it exists, when asked for a file that is a directory.
-* 3 points for returning the plain formatted string given the request arguments.
-* Bonus: 2 points for serving both text and binary files (that can be rendered correctly -- set Content-Type) to a standard Web browser (e.g., Firefox).
+* **2 points** for serving exact copies of text and JPEG files in the browser.
+ <!-- to command line clients like wget or curl.  -->
+ <!-- The MD5 sums should match! -->
+* **2 points** for correctly returning a 404 error code and HTML message when a request asks for a file that does not exist.
+* **2 points** for serving `index.html`, if it exists, when asked for a file that is a directory.
+* **4 points** for returning the plain formatted string given the request arguments.
+* **Bonus: 2 points** for serving other files (that can be rendered correctly -- set Content-Type) to a standard Web browser (e.g., Firefox).
 
 When submitting, you must provide a `Makefile` along with your program and ensure that when your program compiles, the executable's name is `homework5`. If you do not add any files to your source tree (and only update `homework5.c`), you should not need to change anything.
 
@@ -79,9 +83,9 @@ Roughly, your server should follow this sequence:
 3. Receive and parse a request from the client.
 4. Look for the path that was requested, starting from your document root (the second argument to your program). One of four things should happen:
    1. If the path exists and it's a file, formulate a response and send it back to the client (bonus point for handling Content-Type header happens here).
-   2. If the path exists and it's a directory that contains an index.html file, respond with that file.
-   4. If the path does not exist, respond with a 404 code with a basic error page.
-5. If the requested path contains `cgi`, retrieve the URL parameters and create a new child process. Modify the file descriptor of the child process and return the formatted string as plain text.
+   2. If the path exists and it's a directory that contains an `index.html` file, respond with that file.
+   3. If the path does not exist, respond with a 404 code with a basic error page.
+5. If the requested path contains `format_string?`, retrieve the URL parameters and create a new child process. Modify the file descriptor of the child process and return the formatted string as plain text (Hint: You can use `posix_spawnp` from homework 3).
 6. Close the connection, and continue serving other clients.
 
 #### Reminders
