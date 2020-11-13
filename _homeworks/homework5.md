@@ -51,7 +51,7 @@ Your server should handle the following cases:
 <!-- If your server handles the proper HTTP Content-Type header in the response based on the file ending, you will receive a bonus point. We will test `txt`, `gif`, `png`, and `pdf` file extensions. -->
 
 ## Important Note
-Always, always, always **check the return value of any system calls you make!**. This is especially important for `send`, `recv`, `read`, and `write` calls that tell you how many bytes were read or written. Failing can crash autograder giving 0 points.
+Always, always, always **check the return value of any system calls you make!**. This is especially important for `send`, `recv`, `read`, and `write` calls that tell you how many bytes were read or written. Failing to do so can crash autograder giving you zero points.
 
 When testing, you should be able to retrieve byte-for-byte copies of files from your server. Use `wget` or `curl` to fetch files and `md5sum` or `diff` to compare the fetched file with the original. We will grade using this method. *For full credit, the files need to be exact replicas of the original.*
 
