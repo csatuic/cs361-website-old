@@ -8,6 +8,7 @@ due:
     description: 'Assignment #5 due'
 date: 2020-11-13
 github_link: https://classroom.github.com/a/mOe2x5Mz
+student_ports_link: https://docs.google.com/spreadsheets/d/1zB1yOQ5Eoid_Es3C6swoCA4x2ytp8LuC23u3ocMTzK0/
 ---
 
 # {{page.title}}: A Home-Brew Web Server
@@ -97,7 +98,7 @@ Roughly, your server should follow this sequence:
 
 ## How to run your program
 There are two ways to run and test your code:
-1. We would share a spreadsheet assigning unique port numbers to each student to avoid collisions and you can run your code on `systemsX`.
+1. Use [this spreadsheet]({{page.student_ports_link}}) to find your port number, which is unique to you in order to avoid collisions. Use this port number to run the webserver on `systemsX`.
 2. The `devcontainer.json` has settings to forward a port from the container to your local machine. If you wish to change the forwaded port, you can change the port number in line `"forwardPorts": [<port-number>]`.
 
 If you have any questions about the homework requirements or specification, please post on Piazza.
