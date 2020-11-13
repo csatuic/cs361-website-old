@@ -56,7 +56,7 @@ When testing, you should be able to retrieve byte-for-byte copies of files from 
 
 This assignment is worth 10 points in total and 2 additional bonus points:
 
-* **2 points** for serving exact copies of text and JPEG files in the browser.
+* **2 points** for serving exact copies of HTML and JPEG files in the browser.
  <!-- to command line clients like wget or curl.  -->
  <!-- The MD5 sums should match! -->
 * **2 points** for correctly returning a 404 error code and HTML message when a request asks for a file that does not exist.
