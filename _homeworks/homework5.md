@@ -4,7 +4,7 @@ due:
     type: due
     title: homework 5
     date: 2020-11-23T23:59:00-5:00
-    due: Monday, November 23rd 11:59pm Chicago time
+    text: Monday, November 23rd 11:59pm Chicago time
     description: 'Assignment #5 due'
 date: 2020-11-23
 github_link: https://classroom.github.com/a/YrW0d9kf
@@ -12,7 +12,7 @@ github_link: https://classroom.github.com/a/YrW0d9kf
 
 # {{page.title}}: A Home-Brew Web Server
 
-## This homework is be due on {{page.due.due}}
+## This homework is be due on {{page.due.text}}
 
 This homework has the following learning objectives:
 * Learn how to follow a network protocol (in this case, http)
@@ -23,27 +23,29 @@ This homework has the following learning objectives:
 In this homework, we'll look at the HTTP protocol as a Web server. After accepting the assignment, you will find that the `hw5` directory contains:
 
 * `homework5.c`: Skeleton code for the server side of a TCP application. This will be the primary file for this assignment, but feel free to modularize and create other files if you prefer to do so.
-* `WWW/`: A directory containing example files for your Web server to distribute.
+* `WWW/`: A directory containing example files for your Web server to distribute. 
 <!-- * `thread_example.c`: Example code that illustrates a very simple threaded programming scenario. You are not required to use or make any changes to this file, but you should understand what it does. -->
-* `format_string.c`: A simple program that takes two arguments and prints a formatted string as the standard output.
+<!-- * `format_string.c`: A simple program that takes two arguments and prints a formatted string as the standard output. -->
 * A `Makefile`. If you modularize your code into different files, make sure those changes are reflected in the Makefile (and don't forget to `git add` those files to your personal git repo!
 
 Your server program will receive two arguments: 1) the port number it should listen on for incoming connections, and 2) the directory out of which it will serve files (often called the document root in production Web servers). For example:
 
 ```bash
-$ ./homework5 8080 WWW
+$ ./homework5 5000 WWW
 ```
 
-This command will tell your Web server to listen for connections on port 8080 and serve files out of the `WWW` directory. That is, the `WWW` directory is considered `/` when responding to requests. For example, if you're asked for `/index.html`, you should respond with the file that resides in `WWW/index.html`. If you're asked for `/dir1/dir2/file.ext`, you should respond with the file `WWW/dir1/dir2/file.ext`.
+This command will tell your Web server to listen for connections on port 5000 and serve files out of the `WWW` directory. That is, the `WWW` directory is considered `/` when responding to requests. For example, if you're asked for `/index.html`, you should respond with the file that resides in `WWW/index.html`. If you're asked for `/dir1/dir2/file.ext`, you should respond with the file `WWW/dir1/dir2/file.ext`.
 
 ## Requirements
 
 Your server should handle the following cases:
 
-1. Serve requested files out of the specified directory. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to return the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
+1. Serve requested files out of the directory specified in the run-time arguments. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to return the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
 2. If the requested file does not exist, you should respond with a **404** error code and a readable error page containing some basic HTML. 
-3. If the path requested by the client is a directory, you should handle the request as if it was for the file `index.html` inside that directory. You do not need to handle the case where the directory does not contain `index.html` file. Hint: use the `stat()` system call to determine if a path is a directory or a file. The `st_mode` field in the stat struct has what you need.
-4. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client.
+<!-- 3. If the path requested by the client is a directory, you should handle the request as if it was for the file `index.html` inside that directory. You do not need to handle the case where the directory does not contain `index.html` file. Hint: use the `stat()` system call to determine if a path is a directory or a file. The `st_mode` field in the stat struct has what you need. -->
+3. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. As a part of the protocol, you should handle requests like `cgi-bin/hello-world.py?first_name=<str1>&last_name=<str2>` by execute the file `hello-world.py` with `QUERY_STRING` as the environment variable in a new child process and return the response produced by the file by duplicating the file descriptor.
+<!-- and return the string produced by `hello-world.py` inside `WWW/cgi-bin` directory. -->
+<!-- Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client. -->
 
 ## Bonus Point
 
@@ -57,13 +59,13 @@ When testing, you should be able to retrieve byte-for-byte copies of files from 
 
 ## Grading Rubric
 
-This assignment is worth 10 points in total and 2 additional bonus points:
+This assignment is worth **8 points** in total and **2 additional bonus points**:
 
-* **2 points** for serving exact copies of HTML and JPEG files in the browser.
+* **2 points** for serving exact copies of HTML and JPEG files in the browser and using command line clients like `wget` or `curl`. The MD5 sums should match!   
  <!-- to command line clients like wget or curl.  -->
  <!-- The MD5 sums should match! -->
 * **2 points** for correctly returning a 404 error code and HTML message when a request asks for a file that does not exist.
-* **2 points** for serving `index.html`, if it exists, when asked for a file that is a directory.
+<!-- * **2 points** for serving `index.html`, if it exists, when asked for a file that is a directory. -->
 * **4 points** for returning the plain formatted string given the request arguments.
 * **Bonus: 2 points** for serving other files (that can be rendered correctly -- set Content-Type) to a standard Web browser (e.g., Firefox).
 
@@ -88,8 +90,13 @@ Roughly, your server should follow this sequence:
    1. If the path exists and it's a file, formulate a response and send it back to the client (bonus point for handling Content-Type header happens here).
    2. If the path exists and it's a directory that contains an `index.html` file, respond with that file.
    3. If the path does not exist, respond with a 404 code with a basic error page.
-5. If the requested path contains `format_string?`, retrieve the URL parameters and create a new child process. Modify the file descriptor of the child process and return the formatted string as plain text (Hint: You can use `posix_spawnp` from homework 3).
+5. If the requested path contains `cgi-bin`, retrieve the URL parameters and create a new child process. Modify the file descriptor of the child process and return the formatted string as plain text (Hint: You can use `posix_spawn` to accomplish this).
 6. Close the connection, and continue serving other clients.
 
+
+## How to run your program
+There are two ways to run and test your code:
+1. We would share a spreadsheet assigning unique port numbers to each student to avoid collisions and you can run your code on `systemsX`.
+2. The `devcontainer.json` has settings to forward a port from the container to your local machine. If you wish to change the forwaded port, you can change the port number in line `"forwardPorts": [<port-number>]`.
 
 If you have any questions about the homework requirements or specification, please post on Piazza.
