@@ -7,7 +7,7 @@ due:
     text: Monday, November 23rd 11:59pm Chicago time
     description: 'Assignment #5 due'
 date: 2020-11-13
-github_link: https://classroom.github.com/a/1MvIDDT3
+github_link: https://classroom.github.com/a/lMNAawtQ
 ---
 
 # {{page.title}}: A Home-Brew Web Server
