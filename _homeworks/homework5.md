@@ -10,9 +10,9 @@ date: 2020-11-23
 github_link: https://classroom.github.com/a/YrW0d9kf
 ---
 
-## {{page.title}}: A Home-Brew Web Server
+# {{page.title}}: A Home-Brew Web Server
 
-### This homework is be due on {{page.due.due}}
+## This homework is be due on {{page.due.due}}
 
 This homework has the following learning objectives:
 * Learn how to follow a network protocol (in this case, http)
@@ -36,23 +36,26 @@ $ ./homework5 8080 WWW
 
 This command will tell your Web server to listen for connections on port 8080 and serve files out of the `WWW` directory. That is, the `WWW` directory is considered `/` when responding to requests. For example, if you're asked for `/index.html`, you should respond with the file that resides in `WWW/index.html`. If you're asked for `/dir1/dir2/file.ext`, you should respond with the file `WWW/dir1/dir2/file.ext`.
 
-#### Requirements
+## Requirements
 
 Your server should handle the following cases:
 
-1. Serve requested files out of the specified directory. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to provide the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
+1. Serve requested files out of the specified directory. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to return the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
 2. If the requested file does not exist, you should respond with a **404** error code and a readable error page containing some basic HTML. 
 3. If the path requested by the client is a directory, you should handle the request as if it was for the file `index.html` inside that directory. You do not need to handle the case where the directory does not contain `index.html` file. Hint: use the `stat()` system call to determine if a path is a directory or a file. The `st_mode` field in the stat struct has what you need.
 4. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client.
 
-#### Bonus Point
+## Bonus Point
 
 - Handling HTTP Content-Type headers for additional file types provided in the `WWW` directory, like `txt`, `gif`, `png`, and `pdf` will earn you 2 bonus points.
 <!-- If your server handles the proper HTTP Content-Type header in the response based on the file ending, you will receive a bonus point. We will test `txt`, `gif`, `png`, and `pdf` file extensions. -->
 
+## Important Note
+Always, always, always **check the return value of any system calls you make!**. This is especially important for `send`, `recv`, `read`, and `write` calls that tell you how many bytes were read or written. Failing can crash autograder giving 0 points.
+
 When testing, you should be able to retrieve byte-for-byte copies of files from your server. Use `wget` or `curl` to fetch files and `md5sum` or `diff` to compare the fetched file with the original. We will grade using this method. *For full credit, the files need to be exact replicas of the original.*
 
-#### Grading Rubric
+## Grading Rubric
 
 This assignment is worth 10 points in total and 2 additional bonus points:
 
@@ -68,7 +71,7 @@ When submitting, you must provide a `Makefile` along with your program and ensur
 
 Grading will be done automatically using a script. We will publish this script after grading has completed; you are responsible for writing your own test cases. If you wish, you can share test cases you have written with the class.
 
-#### Tips
+## Tips
 
 * Take compiler warnings seriously. Unless it's an unused variable, you should address the warning as soon as you see it. Dealing with a pile of warnings just makes things more difficult later.
 * Test your code in small increments. It's much easier to localize a bug when you've only changed a few lines.
@@ -88,8 +91,5 @@ Roughly, your server should follow this sequence:
 5. If the requested path contains `format_string?`, retrieve the URL parameters and create a new child process. Modify the file descriptor of the child process and return the formatted string as plain text (Hint: You can use `posix_spawnp` from homework 3).
 6. Close the connection, and continue serving other clients.
 
-#### Reminders
-
-Always, always, always **check the return value of any system calls you make!** This is especially important for `send`, `recv`, `read`, and `write` calls that tell you how many bytes were read or written.
 
 If you have any questions about the homework requirements or specification, please post on Piazza.
