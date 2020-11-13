@@ -40,10 +40,11 @@ This command will tell your Web server to listen for connections on port 5000 an
 
 Your server should handle the following cases:
 
+1. Complete the code inside the `main()` function to *create* a socket, *bind* it to an address and port, *listen* for client connections, and *accept* waiting connections.
 1. Serve requested files out of the directory specified in the run-time arguments. For example, if the specified directory is `WWW` and the requested file is `/example.jpg`, you should respond with the file `WWW/example.jpg` if it exists. You need to return the correct HTTP Content-Type header for `jpeg` and `html` files so they can be rendered in the browser.
 2. If the requested file does not exist, you should respond with a **404** error code and a readable error page containing some basic HTML. 
 <!-- 3. If the path requested by the client is a directory, you should handle the request as if it was for the file `index.html` inside that directory. You do not need to handle the case where the directory does not contain `index.html` file. Hint: use the `stat()` system call to determine if a path is a directory or a file. The `st_mode` field in the stat struct has what you need. -->
-3. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. As a part of the protocol, you should handle requests like `cgi-bin/hello-world.py?first_name=<str1>&last_name=<str2>` by execute the file `hello-world.py` with `QUERY_STRING` as the environment variable in a new child process and return the response produced by the file by duplicating the file descriptor.
+3. **Common Gateway Interface (CGI)** is a protocol for a web server to serve dynamic content using command-line interface programs. As a part of the protocol, you should handle requests like `cgi-bin/hello-world.py?first_name=<str1>&last_name=<str2>` by executing the file `hello-world.py` with `QUERY_STRING` as the environment variable in a new child process and return the response produced by the file by duplicating the file descriptor.
 <!-- and return the string produced by `hello-world.py` inside `WWW/cgi-bin` directory. -->
 <!-- Besides returning the static content, you should also handle requests like `format_string?<str1>&<str2>` and return the formatted string to the client. For instance, if the request is `/format_string?test1&test2`, your program should run the `format_string` binary in the `WWW` directory with arguments `test1` and `test2`, and return the output to the client. -->
 
