@@ -12,7 +12,7 @@ github_link: https://classroom.github.com/a/mOe2x5Mz
 
 # {{page.title}}: A Home-Brew Web Server
 
-## This homework is be due on {{page.due.text}}
+## This homework is due on {{page.due.text}}
 
 This homework has the following learning objectives:
 * Learn how to follow a network protocol (in this case, http)
