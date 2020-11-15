@@ -242,7 +242,7 @@ You can find your pairings for the lab in [this sheet]({{page.pairings}}). Pleas
 
 | Task | Points |
 |---|---|
-| Turn in a Gradescope assignment | 5 points |
+| Turn in a Gradescope assignment | 6 points |
 | Discuss your answers | 1 point |
 | Evaluate another student | 1 point |
 | Total points | 8 points |
