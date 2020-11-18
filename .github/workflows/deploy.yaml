@@ -8,7 +8,7 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-    - uses: webfactory/ssh-agent@v0.4.0
+    - uses: webfactory/ssh-agent@v0.4.1
       with:
         # this key is restricted to only rsync to the course website directory
         ssh-private-key: ${{ secrets.SSH_KEY }}
