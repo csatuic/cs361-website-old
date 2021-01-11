@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-11-09T8:00:00-5:00
+date: 2021-04-05T8:00:00-5:00
 title: The design behind the Internet
 contents:
     - "Book: 11.1 - 11.3"

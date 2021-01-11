@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-11-16T8:00:00-5:00
+date: 2021-04-12T8:00:00-5:00
 title: Sockets, Connections, HTTP
 contents:
     - "Book: 11.4 - 11.5"

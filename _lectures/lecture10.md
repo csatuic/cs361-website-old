@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-10-26T8:00:00-5:00
+date: 2021-03-15T8:00:00-5:00
 title: Dynamic Memory Allocation & Garbage collection
 contents:
     - "Book: 9.9-9.10"

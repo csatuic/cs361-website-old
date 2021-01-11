@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-09-21T8:00:00-5:00
+date: 2021-02-08T8:00:00-5:00
 title: System Calls
 contents:
     - "Book: 8.3-8.4"

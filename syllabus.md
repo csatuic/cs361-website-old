@@ -53,10 +53,10 @@ succeed in this class.
 Whenever possible, course information will be conveyed using this website.
 Course discussion will happen via Piazza. Course assignments and assignment
 grades will be collected and returned through Gradescope. We will use
-Blackboard Collaborate for synchronous class sessions (but might use MS Teams
-also/instead depending on student preferences). You are responsible for
-checking this website for the reading schedule and ensuring that you complete
-all assignments, and keeping up to date on Piazza for any
+Blackboard Collaborate for synchronous class sessions. **We will not use any
+other tool on Blackboard besides Blackboard Collaborate**. You are responsible
+for checking this website for the reading schedule and ensuring that you
+complete all assignments, and keeping up to date on Piazza for any
 corrections/clarifications regarding assignments or other important
 information.
 
@@ -69,17 +69,17 @@ before class, a short beginning of class quiz, and a collection of discussion
 questions during class that you complete by yourself, discuss in small groups,
 and then discuss with the entire class.
 
-This semester, the intended flow of a week of class is this:
+This semester, the regularly scheduled activities for class are:
 
-1. Throughout the week: there will be assigned readings, video lectures, and
-   discussion questions.
+1. Throughout the week: there will be assigned readings and video lectures.
 1. Mondays: there is a synchronous, online, required lab session with a short
    activity and a Gradescope quiz based on that activity that must be completed
-   before the end of the day.
+   by 5pm.
 2. Tuesdays: open Q&A office hours. 
 3. Thursdays: content quizzes are due. discussion questions are due. I will go
    over discussion question answers in class. Discussion questions are
    **loosely** based on exam question style, structure, and content.
+1. Fridays: Homework assignments are always due at 5pm on Fridays.
 
 Like peer instruction, we will still have required readings and required
 videos. Rather than having a quiz at the beginning of class, there will be a
@@ -112,11 +112,35 @@ The course grade weighting is:
 | Task | % of total grade     |
 | ---- | ----------------     |
 | Video/reading quizzes (15, lowest two dropped)          | 10  |
-| Class discussion question sets (15, lowest two dropped) | 10*  |
+| Class activities (11, one dropped) | 10*  |
 | Lab activities (14, lowest two dropped)                  | 10  |
 | Homeworks (6, lowest is dropped)     | 30  |
 | Exams (5, lowest is dropped)         | 40  |
 {: class="table table-striped"}
+
+## Grade components
+
+Reading quizzes, lab activities, homeworks, and exams are all graded for
+correctness. Homeworks are autograded using a script, so it is important that
+you submit your code early to (a) make sure you can successfully submit it and
+(b) that your code can pass the autograder tests. We do not give partial credit
+for incomplete or partially correct code. However, we do manually inspect and
+give full credit for anyone whose code works correctly, but was graded
+incorrectly due to the autograder. Please contact the instructors via Piazza if
+you think your homework was graded incorrectly.
+
+The Thursday session of this course is required; it is either the time we take
+an exam, or when we do in-class activities. You can achieve full participation
+credit for coming to class and participating in the activity (which will almost
+always be Kahoot or something Kahoot-like). You won't get class points for
+correct answers, only bragging rights. You can miss one of these sessions with
+no penalty.
+
+The exams are broken out by class module. The first four happen during the
+semester, and the final exam slot is used for the fifth exam. While the exams
+aren't technically cumulative (you will not be tested directly on the same
+topic twice), the concepts in class build on each other and you are responsible
+for remembering and applying concepts from the previous modules on later exams.
 
 
 [pi]: http://mazur.harvard.edu/research/detailspage.php?rowid=8

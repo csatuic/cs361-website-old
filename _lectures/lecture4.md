@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-09-14T8:00:00-5:00
+date: 2021-02-01T8:00:00-5:00
 title: Control flow
 contents:
     - "Book: 8.1-8.2"

@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-11-02T8:00:00-5:00
+date: 2021-03-29T8:00:00-5:00
 title: Memory mapping, review
 contents:
     - "Book: 9.7-9.8"

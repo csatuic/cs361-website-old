@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-10-19T8:00:00-5:00
+date: 2021-03-08T8:00:00-5:00
 title: Memory management, address translation
 contents:
     - "Book: 9.5-9.6"

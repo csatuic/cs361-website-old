@@ -1,86 +1,113 @@
 ---
-title: Homework 6
-section: homeworks
-layout: default
-due: Monday December 2nd, 11:59:59 PM
+title: homework 6
+due: 
+    type: due
+    title: homework 6
+    date: 2020-12-04T16:59:00-5:00
+    text: Friday, December 4th 4:59pm Chicago time
+    description: 'Assignment #6 due'
+date: 2020-11-26
+github_link: https://classroom.github.com/a/9chwauIl
+student_ports_link: https://docs.google.com/spreadsheets/d/1zB1yOQ5Eoid_Es3C6swoCA4x2ytp8LuC23u3ocMTzK0/
+video: https://www.youtube.com/watch?v=qIjd5xOlF5Q
 ---
 
-## {{page.title}}: Homework 6 - Concurrent Elevator Controller
 
-#### This homework will be due {{ page.due }}
+# a web based chat server
 
-A M story highrise has N elevators in a single “elevator bank”, each able to serve every floor of the building. Contrary from most elevator designs, there are no buttons to choose a destination floor inside the elevator. Instead, the elevator lobby at each floor has M individual “destination floor” buttons, and passengers choose their destination by pushing the appropriate button. Once a button is pushed, a display near the buttons tells the passenger which elevator door to wait by. In this assignment, elevators serve only one passenger at a time.
+[GitHub Classroom assignment]({{ page.github_link}})
 
-Your assignment is to create an elevator controller that ensures that all passengers receive service, minimizing the amount of time it takes to serve all of the passengers, and how much CPU time is used to run the controller.
+In this assignment, you will be finishing a super basic, but totally
+functional, web-based chat program. The main challenge for students will be to
+digest the code as given, and write the logic that makes the stateful protocol
+run.
 
-[github classroom assignment](https://classroom.github.com/a/VvMhw7Ca)
+Watch [this video]({{page.video}}) to see the solution code in action.
 
-### The Code
+### HTTP routes
 
-The homework 6 template is a multithreaded program which simulates passengers and elevator travel. There is one thread per elevator, and one thread per passenger. There is a fixed number of passengers, that embark on a number of trips each. These threads interact with each other through a central elevator controller, which is your responsibility to implement.
+The server itself functions as a standard HTTP server. Where the previous
+homework required you to serve files and run external programs based on each
+request, this server functions more as a _web application_ in that the server
+will be performing actions itself based on requests: sometimes it will send a
+file, sometimes it will send chat messages, sometimes it will receive chat
+messages and then send them to all listening clients.
 
-The central controller responds to the following two function calls:
+In a modern web application, rather than simply serving files, these different
+actions are called **routes**. The routes in our application are:
 
-```
-/* called whenever a passenger pushes a button in the elevator lobby. 
-   call enter / exit to move passengers into / out of elevator return 
-   only after the passenger has been delivered to requested floor */ 
-
-void passenger_request(int passenger, int from_floor, int to_floor, void (*enter)(int, int), void(*exit)(int, int));
-
-/* called whenever the elevator needs to know what to do next.
-   call move_direction with direction -1 to descend, 1 to ascend.
-   must call door_open before letting passengers in, and door_close
-   before moving the elevator */ 
-
-void elevator_ready(int elevator, int at_floor, void(*move_direction)(int, int), void(*door_open)(int), void(*door_close)(int));
-```
-
-
-### Performance Expectations
-
-The template code works correctly, but is terribly slow. In part, this is because passengers often “miss” the elevator (don’t get in in time), or miss their floor (stay on the elevator). In part, it is because the elevator stops at every floor, and we only use one elevator.
-
-For a full score, have a fully working solution that uses all available elevators, and finishes each test case in less than 10 seconds with out any busy waiting (aka uses less than 1% CPU).
-
-There is also a **leaderboard** for this assignment. The leaderboard is only for style points, which are not included in your final grade. The leaderboard score is computed as 10000 - (execution time for the leaderboard test case in milliseconds).
-
-The autograder runs a slightly modified version of the Makefile given in the handout - all of the test case variables are the same, but it does not print to the screen, which will likely cause execution time and CPU usage to go down by a very small amount compared to running on systems1. You should be able to write this code on any modern linux machine. Please see the autograder for specific point values. The entire assignment is graded out of 80 points.
-
-#### Notes
-* Every passenger pushes a button.
-* Passengers can’t change their minds, and will wait until they are told to enter the elevator, using the `enter()` callback function
-* Passengers will stay in the elevator until they are told to leave, using the `exit()` callback function.
-* Elevators can hold at most one passenger.
-* The program finishes after all passengers have been served, and all functions have returned.
-
-#### Hints
-
-* Start by making sure your passengers have time to get on and off the elevator. You can do this with condition variables (`pthread_cond_t`), or barriers (`pthread_barrier_t`). A barrier-based solution seems easier. Use one barrier to make the passenger wait for the door to open, and another to make the elevator wait for the passenger to enter.
-* The template solution has a single set of global variables. You’ll probably want to have one set per elevator. Define an elevator struct that holds all your necessary state per elevator, and make an array of such structs.
-* Handling multiple elevators should be the last item on your TODO list. An easy way to do it is to randomly decide, for each passenger, which elevator they should use, independent of everything else. Then you can treat each elevator+passengers group separately.
-* You could use an extra set of mutexes around the whole `passenger_request()` function to make sure only one user’s request is handled by each elevator at one time.
-
-#### Logging
-
-To add more logging output, try using the `log()` function instead of `printf`. `log(loglevel, format_string, parameters) `works just like `fprintf(stderr,...)` except it only prints if the configured log level is higher than the loglevel argument provided. To set the log level to, for example, 8 use the following flag to gcc `-DLOGLEVEL=8`
-
-#### Testing
-
-The `run_tests` script tests some useful configurations, and the last test has the configuration used for testing
-on Gradescope. Your program should be able to pass all the tests. This is to give some type of intermediate testing. The first test is entirely sequential, and there are a couple of tests that are sequential on one type of thread (eg 1 passenger - 4 elevators, 50 passengers - 1 elevator) Further custom testing is also possible. You can play with all these values in `hw6.h`.
+1. `GET /index.html` just sends the static index file.
+2. `GET /listen` set up a "server-sent events" connection, where newly received
+   messages are sent.
+3. `POST /speak` the web browser makes this request when a user wants to send a
+   chat message, and the received message is broadcast to all listening
+   clients.
 
 
-#### Good Documents on Threaded Programming
+### Server-sent events
 
-* http://www.ibm.com/developerworks/linux/library/l-posix1.html?S_TACT=105AGX03&S_CMP=EDU
+Generally, "asynchronous" communication between an http server and an http
+client is somewhat complicated. Thankfully, [server-sent
+events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+make this simple: by sending a response with mime type `text/event-stream`, the
+browser knows to continually read bytes from that socket and interpret them as
+empty-line-delimited individual messages, similar to how HTTP headers and HTTP
+bodies are separated.
 
-* http://www.ibm.com/developerworks/linux/library/l-posix2/?S_TACT=105AGX03&S_CMP=EDU
+Another nice aspect of how the browser works is that it can make multiple
+requests simultaneously through different file descriptors. So once it receives
+`index.html`, it can then make one long-lived HTTP connection to the `/listen`
+endpoint, waiting for new messages to appear, and then make separate
+connections and send messages to the `/speak` endpoint when the client wants to
+send a message.
 
-* http://www.ibm.com/developerworks/linux/library/l-posix3/index.html?S_TACT=105AGX03&S_CMP=EDU
 
-* https://computing.llnl.gov/tutorials/pthreads/#ConVarSignal
+## Skeleton code
 
-* http://pages.cs.wisc.edu/~travitch/pthreads_primer.html
+The skeleton code for this assignment is based off of the event-driven,
+single-threaded echo server in the book. All of the code for receiving multiple
+connections is still in there. The one TODO in the code happens when a new
+message comes in on an individual socket: you need to decide on what to do next
+in order to move the protocol forward. Each time that bytes are received, they
+are accumulated into `requestbuf` for that specific client.
+
+## My suggested strategy
+
+My TODO solutions are 4 and 29 lines long respectively - the vast majority of
+the difficulty in this assignment is understanding what you need to do,
+understanding what the skeleton code does, and then using the helper functions
+already written to add the correct code. The skeleton code itself is based off
+of the select-based echo server that's presented in the book. I would recommend
+reading that section of the book, paying extra attention to how the select
+server was written, and then move forward from there. The main thing that makes
+this more complicated is that the echo server doesn't require any statefulness
+(do different on a given connection based on what information you've received
+previously), and it doesn't require any interaction between different socket
+connections. 
+
+## Grading Rubric
+
+This assignment is worth **10 points** in total.
+
+* **5 points** for getting a simple server working that receives fully formed
+  easy to interpret requests.
+* **5 points** for handling correct but oddly sent requests.
+
+Grading will be done automatically using a script. We will publish this script
+after grading has completed; you are responsible for writing your own test
+cases. If you wish, you can share test cases you have written with the class.
 
 
+## How to run your program
+There are two ways to run and test your code:
+1. Use [this spreadsheet]({{page.student_ports_link}}) to find your port
+   number, which is unique to you in order to avoid collisions. Use this port
+   number to run the webserver on `systemsX`.
+2. The `devcontainer.json` has settings to forward a port from the container to
+   your local machine. If you wish to change the forwarded port, you can change
+   the port number in line `"forwardPorts": [<port-number>]`. You can also
+   ctrl+click on the http link that is printed to the console to open up a
+   browser to that link.
+
+If you have any questions about the homework requirements or specification,
+please post on Piazza.

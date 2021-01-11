@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-09-28T8:00:00-5:00
+date: 2021-02-15T8:00:00-5:00
 title: Signals & Shells
 contents:
     - "Book: 8.5"

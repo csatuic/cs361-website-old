@@ -1,5 +1,5 @@
 ---
 type: exam
-date: 2020-10-13T18:00:00-5:00
+date: 2021-03-04T15:30:00-6:00
 title: Chapters 8 & 10 exam
 ---

@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-11-23T8:00:00-5:00
+date: 2021-04-19T8:00:00-5:00
 title: Concurrency concepts
 contents:
     - "Book: 12.0-12.3"

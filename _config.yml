@@ -6,7 +6,7 @@ departmentname: "UIC Computer Science"
 personal: "https://www.cs.uic.edu/~ckanich/"
 
 gradescope: "https://www.gradescope.com/courses/149010"
-discussion: "https://piazza.com/uic/fall2020/cs361"
+discussion: "https://piazza.com/uic/spring2021/cs361"
 playlist: https://www.youtube.com/playlist?list=PLhy9gU5W1fvUND_5mdpbNVHC1WCIaABbP
 msteams: https://teams.microsoft.com/l/team/19%3a4fc12e999b3041439aa197a44f666a0d%40thread.tacv2/conversations?groupId=86a163d3-11e4-4ae6-893c-78bc11d425af&tenantId=e202cd47-7a56-4baa-99e3-e3b71a7c77dd
 eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA6tHsB0Jwq-i-LKhWJ1N9g/viewform
@@ -14,7 +14,10 @@ eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA
 
 dateformat: "%m/%d/%Y"
 timeformat: "%l:%M %p"
+datetimeformat: "%m/%d/%Y %l:%M %p"
 future: true
+# 12am on the first day of class
+timebase: 2021-01-11T00:00:00-6:00
 
 # render homework html files into the root directory
 collections:

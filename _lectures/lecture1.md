@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2020-08-24T8:00:00-5:00
+date: 2021-01-11T8:00:00-5:00
 title: Syllabus, tricks of the trade intro
 contents:
     - link: https://jvns.ca/wizard-zine.pdf

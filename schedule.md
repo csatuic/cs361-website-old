@@ -10,15 +10,19 @@ O’Hallaron unless otherwise stated.
 
 This semester, the intended flow of a week of class is this:
 
-*  Throughout the week: there will be assigned readings, video lectures, and discussion questions.
+*  Throughout the week: there will be assigned readings and video lectures.
 *  Mondays: there is a synchronous, online, required lab session with a short activity and a
    Gradescope quiz based on that activity **due on that day at 5pm**. Check your schedule for the
    time of your lab session; the lab will take place via Blackboard Collaborate.
-*  Tuesdays: open Q&A office hours in [MS Teams]({{site.msteams}}). Video lectures for the week
-   premiere. I will keep them in [this YouTube playlist]({{site.playlist}}).
-*  Thursdays: Content quizzes and discussion question responses **are due at noon**. I will go over
-   discussion question answers in class. Discussion questions are **loosely** based on exam question
-   style, structure, and content.
+*  Tuesdays: open Q&A office hours in the Blackboard Collaborate course room.
+   Newly recorded video lectures for the week premiere. I will keep them in
+   [this YouTube playlist]({{site.playlist}}). **On weeks with exams**, we will
+   do discussion questions during class on Tuesday, but it won't count toward
+   your participation grade.
+*  Thursdays: Content quizzes **are due at noon**. Class (delivered via
+   Blackboard Collaborate) will almost always be Kahoot or something
+   Kahoot-like, which is a quiz show style online game. **On weeks with
+   exams**, we have the exam during class instead.
 
 All assignment turnins are through [the course gradescope page]({{site.gradescope}}).
 

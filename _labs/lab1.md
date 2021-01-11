@@ -2,8 +2,7 @@
 title: week 1 lab
 description: course intro
 layout: default
-due: Monday, August 24th 5pm Chicago time
-date: 2020-08-24
+date: 2021-01-11T17:00:00-6:00
 # notes gets passed through markdownify
 
  
@@ -11,11 +10,10 @@ date: 2020-08-24
 
 # Lab 1: Welcome/intro
 
-This lab is an easy one. Please complete these activities WHILE YOU ARE
-IN YOUR LAB SESSION (that part is important):
+This lab is an easy one. At some point before 5pm on {{page.date | date: "%s" | date: site.datetimeformat }} (HINT: the order of these tasks is important, reading all of the text shown to you is important):
 
-1. Read the syllabus, and if you have any questions, ask on [Piazza]({{ site.discussion}}).
-1. Take [the pre-class survey](https://forms.gle/SvDr1wyDyUvFLdcL9)
-2. Respond to the
-   [flipgrid](https://flipgrid.com/uiccs361f20) in this group
-3. Complete [this gradescope assignment](https://www.gradescope.com/courses/149010/assignments/582947)
+1. Read the [syllabus](syllabus.html), and if you have any questions, ask on [Piazza]({{ site.discussion}}).
+1. Take [the pre-class survey](https://forms.gle/7G7MkJUAdRJjSXR36)
+2. Respond to this
+   [flipgrid](https://flipgrid.com/bef8b6e3)
+3. Complete [this gradescope assignment](https://www.gradescope.com/courses/225629/assignments/930191)
