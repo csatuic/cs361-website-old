@@ -75,23 +75,26 @@ This semester, the regularly scheduled activities for class are:
 1. Mondays: there is a synchronous, online, required lab session with a short
    activity and a Gradescope quiz based on that activity that must be completed
    by 5pm.
-2. Tuesdays: open Q&A office hours. 
-3. Thursdays: content quizzes are due. discussion questions are due. I will go
-   over discussion question answers in class. Discussion questions are
-   **loosely** based on exam question style, structure, and content.
-1. Fridays: Homework assignments are always due at 5pm. This will usually be on
-   Fridays but not always.
+2. Tuesdays: open Q&A office hours. During exam weeks, these will be exam review.
+3. Thursdays: Content quizzes are due at 12:30pm. Discussion questions are due at 12:30pm.
+   Discussion questions are **loosely** based on exam question style, structure, and content. During
+   class, we will **either** do an in class activity, or do the exam.
+1. Fridays: Homework assignments are due at 5pm. This will usually be on
+   Fridays but there are some exceptions to give you time to complete the
+   relevant homework before the related exam.
 
 Like peer instruction, we will still have required readings and required
 videos. Rather than having a quiz at the beginning of class, there will be a
 quiz graded for correctness each week based on that content. These will be
-released on Wednesdays and due at 12:30pm on Thursdays.
+released on Mondays and due at 12:30pm on Thursdays.
 
 Each week there will also be one set of discussion questions. These questions
 are meant to be considered by yourself, but you are encouraged to discuss the
 questions in small groups. You must answer these questions on Gradescope as
 well, but you will only be graded on completeness and effort, not on
-correctness.
+correctness. Each week's discussion question is only worth .13% of your grade,
+so don't stress if you miss them. However, thinking through the answers to
+these questions will help a lot on the exams.
 
 
 {% capture homework_policy %}{% include homework_policy.md %}{% endcapture %}
@@ -113,7 +116,8 @@ The course grade weighting is:
 | Task | % of total grade     |
 | ---- | ----------------     |
 | Video/reading quizzes (15, lowest two dropped)          | 10  |
-| Class activities (11, one dropped) | 10*  |
+| Class activities (11, one dropped) | 8*  |
+| Discussion questions (11, one dropped) | 2 |
 | Lab activities (14, lowest two dropped)                  | 10  |
 | Homeworks (6, lowest is dropped)     | 30  |
 | Exams (5, lowest is dropped)         | 40  |
@@ -151,11 +155,15 @@ for remembering and applying concepts from the previous modules on later exams.
 #  Class Participation
 
 Class participation is an incredibly important component of this course regardless of whether it is
-online or in person. Unfortunately, "participation" is very hard to grade. The 10% of your grade
-that is marked as "participation" is largely an honor system - you aren't required to get the
-questions correct or write several paragraph long answers to the discussion questions to get full
-credit. However, students who meaningfully engage with each other, either through Piazza or during
-the class discussion sessions can raise their discussion grade up to a maximum of 20/10.
+online or in person. Unfortunately, "participation" is very hard to grade. The 8% that you get from
+showing up on Thursdays is just from showing up - you're encouraged to participate, because it will
+help you do well on the exams, but there's no requirement that you talk a certain amount of times or
+anything like that. For the 2% that you get from the discussion questions, you aren't required to
+get the questions correct or write several paragraph long answers to get full credit.
+
+## Participation extra credit
+Students who meaningfully engage with each other, either through Piazza or during
+the class discussion sessions can raise their discussion grade up to a maximum of 18/8.
 Additionally, I will consider high quality discussion question answers for students who are very
 close to any grade cutoffs at the end of the semester. Submitting bug fixes or providing test cases
 for homework assignments can also earn extra credit. 
