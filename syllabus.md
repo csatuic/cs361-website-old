@@ -79,7 +79,8 @@ This semester, the regularly scheduled activities for class are:
 3. Thursdays: content quizzes are due. discussion questions are due. I will go
    over discussion question answers in class. Discussion questions are
    **loosely** based on exam question style, structure, and content.
-1. Fridays: Homework assignments are always due at 5pm on Fridays.
+1. Fridays: Homework assignments are always due at 5pm. This will usually be on
+   Fridays but not always.
 
 Like peer instruction, we will still have required readings and required
 videos. Rather than having a quiz at the beginning of class, there will be a
