@@ -63,7 +63,7 @@ defaults:
     values:
       type: event
 
-baseurl: "/~ckanich/cs361/f20"
+baseurl: "/~ckanich/cs361/s21"
 
 exclude: [README.md, Makefile]
 
