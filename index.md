@@ -11,8 +11,8 @@ keyword: home
 # Basics
 **Lab Section**: Mondays (see your schedule for specific time)    
 **Course Location**: Our "classroom" will always be the scheduled blackboard collaborate meeting. All office hours will take place in the "course room" which will always be open for anyone to join.     
-**Office Hours**: 12:30 pm-3:30 pm Tuesdays [via MS Teams][teams]    
-**Q&A Session**: 12:30 pm - 3:30 pm Thursdays [via MS Teams][teams]   
+**Office Hours**: 3:30 - 4:45 pm Tuesdays via Zoom    
+**Class**: 3:30 - 4:45 pm Thursdays via (videoconferencing system tbd)   
 **Instructor**: [Chris Kanich][ckanich]   
 **Book**: Computer Systems, a programmer's perspective, by Randal E. Bryant and David R. O'Hallaron. Reading assignments will follow the 3rd edition.    
 
