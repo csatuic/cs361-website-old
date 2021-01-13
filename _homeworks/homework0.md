@@ -51,5 +51,5 @@ acceptable excuse for improper or late submissions.**
 This assignment has **0 points**. The autograder points are shown for demonstration.
 
 ## Due Date
-This assignment is due {{ page.due.date | date_to_rfc822 }}. See the
+This assignment is due {{ page.due.date | date: "%s" | date: site.datetimeformat }}. See the
 [syllabus](syllabus.html) for the late turnin policy. 
