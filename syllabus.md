@@ -148,7 +148,7 @@ topic twice), the concepts in class build on each other and you are responsible
 for remembering and applying concepts from the previous modules on later exams.
 
 
-[pi]: http://mazur.harvard.edu/research/detailspage.php?rowid=8
+[pi]: https://en.wikipedia.org/wiki/Peer_instruction
 [ckanich]: mailto:ckanich@uic.edu
 
 
