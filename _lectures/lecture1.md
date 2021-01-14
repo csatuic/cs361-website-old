@@ -171,7 +171,7 @@ Substitute your netID for mine here. By adding the `ForwardAgent` line, you'll b
 
 ## Using remote containers
 
-Now that you have Docker and VSCode, you can use a linux environment locally. You can use the "Open folder in container..." command in VSCode to open a directory in a container (hit ctrl+shift+p to bring up the command palette, then start typing those words and select that command once you see it). If the directory has a container config already (in the `.devcontainers` subdirectory), it will configure the Linux environment for you, otherwise it will ask you which environment you want to use. For this class, **Ubuntu** is sufficient. When using the same configuration as other students/instructors, this gives us our final goal: a standardized development environment running on any host laptop.
+Now that you have Docker and VSCode, you can use a linux environment locally. You can use the "Open folder in container..." command in VSCode to open a directory in a container (hit ctrl+shift+p to bring up the command palette, then start typing those words and select that command once you see it). If the directory has a container config already (in the `.devcontainers` subdirectory), it will configure the Linux environment for you, otherwise it will ask you which environment you want to use. For this class, **Ubuntu 18.04** is sufficient. When using the same configuration as other students/instructors, this gives us our final goal: a standardized development environment running on any host laptop.
 
 ## Potential problems/confusing things
 
