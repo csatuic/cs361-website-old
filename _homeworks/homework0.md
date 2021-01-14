@@ -4,7 +4,7 @@ description: Turning in using Gradescope, pair evaluation
 layout: default
 due:
    type: due
-   title: homework 1
+   title: homework 0
    date: 2021-01-20T23:59:00-6:00
    description: Turning in using Gradescope, pair evaluation
 github_link: https://classroom.github.com/a/QVDmPCEN 
