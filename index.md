@@ -10,8 +10,8 @@ keyword: home
 
 # Basics
 **Lab Section**: Mondays (see your schedule for specific time)    
-**Course Location**: Our "classroom" will always be the scheduled blackboard collaborate meeting. All office hours will take place in the "course room" which will always be open for anyone to join.     
-**Office Hours**: 3:30 - 4:45 pm Tuesdays via Zoom    
+**Course Location**: Our "classroom" is currently in flux. The current contenders are Zoom and Acadly.      
+**Professor Office Hours**: 3:30 - 4:45 pm Tuesdays via [Zoom](https://uic.zoom.us/my/ckanich)    
 **Class**: 3:30 - 4:45 pm Thursdays via (videoconferencing system tbd)   
 **Instructor**: [Chris Kanich][ckanich]   
 **Book**: Computer Systems, a programmer's perspective, by Randal E. Bryant and David R. O'Hallaron. Reading assignments will follow the 3rd edition.    
@@ -19,10 +19,10 @@ keyword: home
 **Discussion**: [Piazza][piazza]
 
 **Graduate TAs**: Rohan Vardekar, Shubham Singh, Mohammad Ghasemisharif   
-**Office**: Blackboard Collaborate   
+**Office**: Check the TA calendar below for times and videoconferencing systems    
 
 **Undergraduate TAs**: Akhil Modi, Logan Scott, Spanya Shamasa    
-**Office**: Blackboard Collaborate      
+**Office**: [Zoom](https://uic.zoom.us/my/ckanich) but I'm also available on MS Teams and discord      
 
 <iframe src="https://calendar.google.com/calendar/embed?src=c_pieebda51v6jvmaq7s0drsvg5g%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
 
