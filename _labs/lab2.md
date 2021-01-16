@@ -37,7 +37,7 @@ rubric.
 | Session 1 |  What kind of files does the linker use as input, what is the output and when is the linker used? compile time, load time, run time, etc  | 1 point |
 
 | Session 2 | Explain what occurs when the linker encounters duplicate symbol names | 1 point |
-<!-- {: class="table table-striped"} -->
+{: class="table table-striped"}
 
 
 
@@ -49,7 +49,7 @@ When you're the evaluator, make sure to record the response via [this form]({{pa
 |---|---|
 | As an evaluator, ask your session question and evaluate their explanation | 1 point |
 | An an evaluatee, answer and give reasons for your answer to your session question | 1 point |
-<!-- {: class="table table-striped"} -->
+{: class="table table-striped"}
 
 ## Timing 
 
