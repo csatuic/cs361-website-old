@@ -35,7 +35,8 @@ rubric.
 | Session | Question | Points |
 |---|---|---|
 | Session 1 |  What kind of files does the linker use as input, what is the output and when is the linker used? compile time, load time, run time, etc  | 1 point |
-| Session 2 | Describe how a linker resolves duplicate symbol names | 1 point |
+
+| Session 2 | Explain what occurs when the linker encounters duplicate symbol names | 1 point |
 <!-- {: class="table table-striped"} -->
 
 
