@@ -56,7 +56,7 @@ In this assignment, you must fill `hw1.c` with code which will:
 3. cause `gcc -c -Wall hw1.c` and `gcc -Wall -o hw1 *.c` to issue zero warnings (and zero errors).
 2. cause Type, Bind, and Ndx of each Symbol to be the same as in the
    example below. E.g. `important` must have Type `FUNC`, Bind `LOCAL`,
-   and `Ndx` 1.
+   and Ndx `1`.
 
 Running `readelf -sW hw1.o` on the solution results in:
 
