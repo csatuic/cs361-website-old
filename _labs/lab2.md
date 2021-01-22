@@ -5,6 +5,7 @@ layout: default
 date: 2021-01-16T17:00:00-6:00
 # notes gets passed through markdownify
 skeleton_repo: csatuic/cs361-lab2-skeleton
+eval_link: https://docs.google.com/forms/d/e/1FAIpQLSdcaKpVZBvGb20ji1OR1rB0xQKsA6tHsB0Jwq-i-LKhWJ1N9g/viewform
 pairings: https://docs.google.com/spreadsheets/d/1bZjrDnENR1Q0_1WYeZq05YEjBxo_wBM5DtT4Hgh2aCs/edit?usp=sharing
 session_1_rubric: https://docs.google.com/document/d/1F7HpiP01XIg67D344auKhCeB8_BflukkjwvDqFnwIfM/edit?usp=sharing
 session_2_rubric: https://docs.google.com/document/d/1E0NGlZW81R-iUS6LBUUF2kSpvBlx-HNP0qrH3vrd4oE/
