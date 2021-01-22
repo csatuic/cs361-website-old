@@ -53,8 +53,7 @@ succeed in this class.
 Whenever possible, course information will be conveyed using this website.
 Course discussion will happen via Piazza. Course assignments and assignment
 grades will be collected and returned through Gradescope. We will use
-Blackboard Collaborate for synchronous class sessions. **We will not use any
-other tool on Blackboard besides Blackboard Collaborate**. You are responsible
+(TBD) for synchronous class sessions. You are responsible
 for checking this website for the reading schedule and ensuring that you
 complete all assignments, and keeping up to date on Piazza for any
 corrections/clarifications regarding assignments or other important
@@ -148,7 +147,7 @@ topic twice), the concepts in class build on each other and you are responsible
 for remembering and applying concepts from the previous modules on later exams.
 
 
-[pi]: http://mazur.harvard.edu/research/detailspage.php?rowid=8
+[pi]: https://en.wikipedia.org/wiki/Peer_instruction
 [ckanich]: mailto:ckanich@uic.edu
 
 
