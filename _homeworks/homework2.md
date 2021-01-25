@@ -3,9 +3,9 @@ title: homework 2
 due: 
     type: due
     title: homework 2
-    date: 2020-09-28T23:59:00-5:00
+    date: 2021-02-12T16:59:59-6:00
     description: 'Assignment #2 due'
-date: 2020-09-14
+date: 2021-01-25
 github_link: https://classroom.github.com/a/S_KKbtOw
 ---
 
