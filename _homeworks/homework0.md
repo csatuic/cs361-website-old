@@ -8,6 +8,7 @@ due:
    date: 2021-01-20T23:59:00-6:00
    description: Turning in using Gradescope, pair evaluation
 github_link: https://classroom.github.com/a/QVDmPCEN 
+date: 2021-01-13
 ---
 
 # Homework 0: Turning in assignments
