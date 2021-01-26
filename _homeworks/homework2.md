@@ -3,9 +3,15 @@ title: homework 2
 due: 
     type: due
     title: homework 2
+<<<<<<< HEAD
     date: 2021-02-12T16:59:59-6:00
     description: 'Assignment #2 due'
 date: 2021-01-25
+=======
+    date: 2020-09-28T23:59:00-5:00
+    description: 'Assignment #2 due'
+date: 2020-09-14
+>>>>>>> a5f3c43... Added hw2 github classroom link and added hw2 to the _homeworks directory
 github_link: https://classroom.github.com/a/S_KKbtOw
 ---
 
@@ -20,7 +26,7 @@ In the last homework you looked at the symbol table of your own compiled program
 Before you start, please make sure to set up your environment correctly. You have two options for this homework:
 
 1. Use `systems[1-4].cs.uic.edu` (e.g. systems1, systems2, etc.), or
-2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).**
+2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).** After opening the workspace in the container, please install `ltrace` and `strace` using `sudo apt update && sudo apt install ltrace strace -y`. 
 
 In either case, when you run `whoami` command in the terminal, it should return your UIC NetID. Please note that if the result is different than your NetID, your secrets will not be accepted by the autograder. 
 
