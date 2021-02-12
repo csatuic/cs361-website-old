@@ -3,7 +3,7 @@ title: homework 3
 due: 
     type: due
     title: homework 3
-    date: 2021-03-01T23:59:00-5:00
+    date: 2021-03-01T16:59:59-6:00
     description: 'Assignment #3 due'
 date: 2021-02-15
 github_link: https://classroom.github.com/a/z4CYA0aF 
@@ -123,5 +123,5 @@ autograder early on during the assignment: learning how to test your own code is
 of this assignment.
 
 ### Due Date
-This assignment is due {{ page.due.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turn-in policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
+This assignment is due {{ page.due.date | date: "%s" | date: site.datetimeformat }}. See the [syllabus](syllabus.html) for the late turn-in policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
 
