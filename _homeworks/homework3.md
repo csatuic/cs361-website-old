@@ -6,7 +6,7 @@ due:
     date: 2021-03-01T16:59:59-6:00
     description: 'Assignment #3 due'
 date: 2021-02-15
-github_link: https://classroom.github.com/a/z4CYA0aF 
+github_link: https://classroom.github.com/a/2CQ1rgoo 
 ---
 
 ### Homework 3: Write your own shell
@@ -23,15 +23,15 @@ of all, it will use the modern `posix_spawnp` interface rather than the sad old 
 
 #### The programming part
 
-For this assignment you are to write a simple program that will act as a shell. The simple case 
-of running `$ command arg1 arg2 ...` is already implemented and available in the 
-`exec_cmd` function. In that example, stdin and stdout are connected to their usual files. 
-Use that as a starting point to complete the following requirements:
+For this assignment you are to write a simple program that will act as a shell. The program should:
 
 * Display a command prompt and read in a command line from the user (the prompt must be `CS361 >` with 
 exactly one space between `CS361` and `>`, otherwise it cannot be detected by the autograder)
 * Your shell must support basic piping like the unix shell. 
-  1. `$ command args < input_redirection` Run the command, but connect `stdin` to the contents of
+  1. `$ command arg1 arg2 ...` Run command, with stdin and stdout connected to their usual files. We
+  already implemented this requirement during week 6 lab. Use this as a starting point to complete 
+  the rest of the requirements
+  2. `$ command args < input_redirection` Run the command, but connect `stdin` to the contents of
      the file `input_redirection`.
   2. `$ command args > output_redirection`  Run the command, but connect `stdout` to the contents of
      the file `output_redirection`.
