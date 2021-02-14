@@ -6,13 +6,13 @@ due: Monday, February 15th 5pm Chicago time
 date: 2021-02-15T17:00:00
 # notes get passed through markdownify
 github_link: https://classroom.github.com/a/2CQ1rgoo 
-pairings: https://docs.google.com/spreadsheets/d/1aDhmwnsBxdncsRgVD9pffNOm4_yM3I0dvijhO0Cs0wo/
+pairings: https://docs.google.com/spreadsheets/d/1sTUIwLdSZiBNUb7ldzmI-M3XUB5oLW8wDNf0czptuBo
 ---
 
-# Introduction to Homework 3
+# Lab 5: {{page.description}}
 
 In this lab, we will be writing a shell program.  A shell is the program that all of you use when
-you ssh to a linux machine, or hit ``ctrl+``` to open a terminal in vscode. It's the program which
+you ssh to a linux machine, or hit ``ctrl+` `` to open a terminal in vscode. It's the program which
 prints out a prompt, reads in what you type, and then executes whatever instruction you told it to
 do.  It is different from ssh (which is the program you use to connect to the server), or linux
 (which is the OS on which your shell is running). The assignment is not yet posted, but the basic
@@ -60,7 +60,30 @@ it returns success or failure, rather than returning the process id. You will ha
 variable to store the process id, and pass it **by reference** to the `posix_spawn` or `posix_spawnp` 
 function.
 
-## Getting started on Homework 3
+## What you need to do for this lab
+
+For the first half of the lab, you will be working on your own to understand `spawnshell.c` and 
+complete the `exec_cmd` function so that your shell can run simple commands (e.g., `ls`) 
+correctly. For the second half, you will be working with your peers and performing the evaluation.
+
+You can find your pairings for the lab in [this sheet]({{page.pairings}}).
+
+The peer explanations for this lab are:
+
+<!-- 1. Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs -->
+   <!-- "echo hello world." -->
+<!-- 2. Show your evaluator what you did to switch `fork` with `posix_spawnp` to run a child process. -->
+
+| Session | Task | Points |
+|---|---|---|
+| Session A | Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs "echo hello world." | 1 point |
+| Session B | Show your evaluator what you did to add `posix_spawnp` to run a child process. | 1 point |
+{: class="table table-striped"}
+
+Please grade your peers out of **1 point** using [this form]({{site.eval_link}}).
+
+
+# Getting started on Homework 3
 
 Accept Homework 3 if you haven't already, and open it up. Your task for the remainder of the lab is
 to complete the `exec_cmd` function (indicated with `Lab 5 TODO:`) in `spawnshell.c` so that it uses `posix_spawn` to run simple 
@@ -70,7 +93,7 @@ Note that using `posix_spawnp` makes life a little easier because it uses the `$
 environment variable to find executables. For instance, in `posix_spawn` you will need to use 
 `/bin/ls` to run `ls` command while `ls` works in `posix_spawnp`.
 
-## Testing
+## Testing Homework 3
 
 One very important component of all software engineering is testing. Rather than doing our testing
 for this assignment via the autograder right away, we will be showing you how you can test the full
@@ -105,7 +128,7 @@ and see that it works properly.
 
 > Ask yourself: how can you convince yourself that it is working properly? Hint: read the output of
 > `man diff` and try to think of a way to use that tool to determine whether your shell is running
-> properly (note: not that it's using posix_spawn, just that it is working as you expect it to).
+> properly (note: not that it's using `posix_spawn`, just that it is working as you expect it to).
 
 ## Receiving redirected input vs. redirecting input ourselves
 
@@ -122,25 +145,3 @@ cat < list of files
 ```
 
 ...and it would work the way that `sh` works when given that set of inputs.
-
-## What you need to do for this lab
-
-For the first half of the lab, you will be working on your own to understand `spawnshell.c` and 
-complete the `exec_cmd` function so that your shell can run simple commands (e.g., `ls`) 
-correctly. For the second half, you will be working with your peers and performing the evaluation.
-
-You can find your pairings for the lab in [this sheet]({{page.pairings}}).
-
-The peer explanations for this lab are:
-
-<!-- 1. Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs -->
-   <!-- "echo hello world." -->
-<!-- 2. Show your evaluator what you did to switch `fork` with `posix_spawnp` to run a child process. -->
-
-| Session | Task | Points |
-|---|---|---|
-| Session A | Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs "echo hello world." | 1 point |
-| Session B | Show your evaluator what you did to add `posix_spawnp` to run a child process. | 1 point |
-{: class="table table-striped"}
-
-Please grade your peers out of **1 point** using [this form]({{site.eval_link}}).
