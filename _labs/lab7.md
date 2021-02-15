@@ -8,7 +8,7 @@ date: 2021-02-22
 pairings: https://docs.google.com/spreadsheets/d/11arhxc3gFmc497lN-gAxt9SKxLldbOR--xIDvz7qKLc
 ---
 
-# Lab 7: Pipe 
+# Lab 6: Pipe 
 
 In this lab, you will learn how piping two commands in `posix_spawnp()` works. You need to work on your own and complete the Lab 7 assignment on [Gradescope]({{site.gradescope}}). 
 The main activities are:
