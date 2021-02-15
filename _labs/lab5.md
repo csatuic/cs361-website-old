@@ -68,6 +68,12 @@ correctly. For the second half, you will be working with your peers and performi
 
 You can find your pairings for the lab in [this sheet]({{page.pairings}}).
 
+## Sample Input
+* ```/bin/echo hello world```
+* ```/bin/echo CS361 > cs361.txt```
+* ```/bin/ls -ltr | grep spawn```
+* ```/bin/echo hello &```
+
 The peer explanations for this lab are:
 
 <!-- 1. Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs -->
@@ -76,7 +82,7 @@ The peer explanations for this lab are:
 
 | Session | Task | Points |
 |---|---|---|
-| Session A | Draw a before and after diagram of the contents of `buf`, `argc`, and `argv` when the user runs "echo hello world." | 1 point |
+| Session A | Guess the values of parsed_args members (argc, argv, bg, and mode) for given sample inputs | 1 point |
 | Session B | Show your evaluator what you did to add `posix_spawnp` to run a child process. | 1 point |
 {: class="table table-striped"}
 
