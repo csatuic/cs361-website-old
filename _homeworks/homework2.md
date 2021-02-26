@@ -64,6 +64,8 @@ Open your `howto.txt` alongside your shell as you work on each executable file, 
 
 The content of lab section will cover basic usage of `gdb`, `strace` and `ltrace` which will be incredibly helpful for this assignment. 
 
+`./4` is the "final boss" of this assignment (and is thus worth more points). It tests the implementation of a dynamically linked library, so it will leverage all of your skills that you've developed while studying chapter 7.
+
 #### Template 
 
 The executable files are available in the classroom repository and can be accessed using the link above.
