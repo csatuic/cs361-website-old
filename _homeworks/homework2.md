@@ -4,10 +4,14 @@ due:
     type: due
     title: homework 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     date: 2021-02-12T16:59:59-6:00
 =======
     date: 2020-09-28T23:59:00-5:00
 >>>>>>> a5f3c43... Added hw2 github classroom link and added hw2 to the _homeworks directory
+=======
+    date: 2021-02-12T16:59:59-6:00
+>>>>>>> 3ac1806... Fixed due date:
     description: 'Assignment #2 due'
 date: 2020-09-14
 github_link: https://classroom.github.com/a/S_KKbtOw
