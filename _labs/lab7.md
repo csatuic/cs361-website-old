@@ -34,9 +34,9 @@ The main activities for this lab are:
 
 | Task | Points |
 |---|---|
-| Turn in a Gradescope assignment | 8 points |
+| Turn in a Gradescope assignment | 6 points |
 | Evaluate another student | 1 points |
-| Total points | 9 points |
+| Total points | 7 points |
 {: class="table table-striped"}
 
 
