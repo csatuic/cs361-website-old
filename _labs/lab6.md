@@ -10,11 +10,7 @@ pairings: https://docs.google.com/spreadsheets/d/11arhxc3gFmc497lN-gAxt9SKxLldbO
 
 # Lab 6: Pipe 
 
-<<<<<<< HEAD
-In this lab, you will learn how piping two commands in `posix_spawnp()` works. You need to work on your own and complete the Lab 7 assignment on [Gradescope]({{site.gradescope}}). 
-=======
 In this lab, you will learn how piping two commands in `posix_spawnp()` works. You need to work on your own and complete the Lab 6 assignment on [Gradescope]({{site.gradescope}}). 
->>>>>>> upstream/main
 The main activities are:
 1. Read the provided code on Gradescope, try to understand it and answer the corresponding questions.
 2. Discuss the answers with your peer. You can find your pairings for the lab in [this sheet]({{page.pairings}}).
