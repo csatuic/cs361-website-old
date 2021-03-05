@@ -3,7 +3,7 @@ title: homework 4
 due: 
     type: due
     title: homework 4
-    date: 2021-03-22T16:59:59-6:00
+    date: 2021-03-22T15:59:59-6:00
     description: 'Assignment #4 due'
 date: 2021-03-08
 github_link: https://classroom.github.com/a/cryYN7zf
@@ -73,4 +73,5 @@ The completed assignment should be turned in via [Gradescope]({{site.gradescope}
 
 ### Due Date
 
-The assignment is due {{ page.due.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turn-in policy.
+The assignment is due {{ page.due.date | date: "%s" | date: site.datetimeformat }}
+. See the [syllabus](syllabus.html) for the late turn-in policy.
