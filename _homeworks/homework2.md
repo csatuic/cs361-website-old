@@ -5,8 +5,7 @@ due:
     title: homework 2
     date: 2021-02-12T16:59:59-6:00
     description: 'Assignment #2 due'
-date: 2021-01-25
-github_link: https://classroom.github.com/a/S_KKbtOw
+    github_link: https://classroom.github.com/a/S_KKbtOw
 ---
 
 ### {{ page.title }}: Inspecting Running Processes
@@ -20,7 +19,7 @@ In the last homework you looked at the symbol table of your own compiled program
 Before you start, please make sure to set up your environment correctly. You have two options for this homework:
 
 1. Use `systems[1-4].cs.uic.edu` (e.g. systems1, systems2, etc.), or
-2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).**
+2. Use the `.devcontainer` folder that is included with the skeleton code to set up your Docker container environment. **Before opening your workspace in the container, you need to modify both `Dockerfile` and `devcontainer.json` files and replace the `netid` with your UIC NetID (`ARG USERNAME=netId` and `"remoteUser": "netId"`).** After opening the workspace in the container, please install `ltrace` and `strace` using `sudo apt update && sudo apt install ltrace strace -y`. 
 
 In either case, when you run `whoami` command in the terminal, it should return your UIC NetID. Please note that if the result is different than your NetID, your secrets will not be accepted by the autograder. 
 
@@ -74,7 +73,7 @@ The executable files are available in the classroom repository and can be access
 
 Both `secrets.txt` and `howto.txt` **must be submitted to Gradescope via GitHub**. While grading `secrets.txt` will be done automatically, the `howto.txt` will be graded by hand. You should have both files in your submission. If you do not fill `secrets.txt` out exactly as directed, autograding will fail. If you do not complete your assignment on any of `systems[1-4].cs.uic.edu` machines or the Docker container, autograder may fail. If you have issues with the autograder, please contact us via Piazza ASAP. **Technical issues within 36 hours of the deadline will not be an excuse for submitting the assignment improperly or late.**
 
-The first 4 are each worth 1 point each, the final one is worth 4 points. An additional 2 points will be given for correct howtos.
+The first 4 are each worth 1 point each, the final one is worth 4 points. An additional 2 points will be given for each correct howto.
 
 ### Due Date
 This assignment is due {{ page.due.date | date_to_rfc822 }}. See the [syllabus](syllabus.html) for the late turn-in policy. This assignment is worth just as much as every other homework, so getting as much credit on it as possible is important (don't turn it in late!).
