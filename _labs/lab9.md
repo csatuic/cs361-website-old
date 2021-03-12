@@ -1,5 +1,5 @@
 ---
-title: week 11 lab
+title: week 10 lab
 description: Testing GC Code
 layout: default
 due: Monday, March 15th 5pm Chicago time
