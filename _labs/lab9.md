@@ -223,7 +223,7 @@ You can find your pairings for the lab in [this sheet]({{page.pairings}}). Pleas
            if blockMarked(p)
             unmarkBlock();
               else if (blockAllocated(p)) 
-                 free(p);
+                 mm_free(p);
               p = nextBlock(p);
               }     
         }
