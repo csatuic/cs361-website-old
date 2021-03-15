@@ -28,12 +28,13 @@ int main(int argc, char** argv) {
 }
 ```
 3. You can use this new main functin by adding the following line to your
-   makefile:
-```
+   makefile: (The line spacing here is important. The second line of a
+   makefile rule must use single tab spacing)
+make```
 debug: *.c *.h
     gcc -O0 -g ./hw4-library/memlib.c ./hw4-library/mm.c ./hw4.c ./hw4-library/debug_main.c -o hw4 --std=gnu99
 ```
-You will also need to edit the path for hw4.h in debug_main.c from "hw4.h" to "../hw4.h"
+You will also need to edit the path for hw4.h in debug_main.c from `hw4.h` to `../hw4.h`
 
 
 4.  This code allocates 1000 pointers, and then deallocates them all and
