@@ -28,8 +28,8 @@ int main(int argc, char** argv) {
 }
 ```
 3. You can use this new main functin by adding the following line to your
-   makefile: (The line spacing here is important. The second two lines of a
-   makefile must use double tab spacing)
+   makefile: (The line spacing here is important. The second line of a
+   makefile rule must use single tab spacing)
 make```
 debug: *.c *.h
     gcc -O0 -g ./hw4-library/memlib.c ./hw4-library/mm.c ./hw4.c ./hw4-library/debug_main.c -o hw4 --std=gnu99
