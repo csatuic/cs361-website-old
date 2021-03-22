@@ -207,7 +207,7 @@ You can find your pairings for the lab in [this sheet]({{page.pairings}}). Pleas
     pointer within that range.
 ```c
         void mark(ptr p) {
-           if (b == is_ptr(p) == NULL)      return;        
+           if ((b = is_ptr(p)) == NULL)      return;        
            if (markBitSet(b)) return;     
            setMarkBit(b);                 
            for (i=0; i < length(b); i++)
